@@ -1,11 +1,15 @@
-import { AnimatedWelcome } from "../components/animations/AnimatedWelcome";
-import LandingPage from "../components/landing/LandingPage";
+import { AnimatedWelcome } from "@/components/animations";
+import BotAndRecipes from "@/components/bot&recipes";
+import LandingPage from "@/components/landing";
+import Product from "@/components/product";
 
 export default function HomePage() {
   return (
     <div>
-      <AnimatedWelcome />
+      <AnimatedWelcome/>
       <LandingPage />
+      <Product />
+      <BotAndRecipes />
     </div>
   );
 }
