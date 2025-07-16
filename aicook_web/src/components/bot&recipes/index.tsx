@@ -8,34 +8,34 @@ export default function BotAndRecipes() {
       key="ai-bot"
       src="/mockups/ai_bot.png"
       alt="AI Bot Screen"
-      className="max-w-[160px] sm:max-w-[220px] md:max-w-[300px] w-full h-auto drop-shadow-xl"
+      className="max-w-[280px] sm:max-w-[320px] md:max-w-[300px] w-full h-auto drop-shadow-xl"
     />,
     <img
       key="recipes"
       src="/mockups/recipes.png"
       alt="Recipes Screen"
-      className="max-w-[140px] sm:max-w-[220px] md:max-w-[300px] w-full h-auto drop-shadow-xl"
+      className="max-w-[280px] sm:max-w-[320px] md:max-w-[300px] w-full h-auto drop-shadow-xl"
     />,
     <img
       key="recipe-card"
       src="/mockups/recipe_card.png"
       alt="Recipe Card Screen"
-      className="max-w-[140px] sm:max-w-[220px] md:max-w-[300px] w-full h-auto drop-shadow-xl"
+      className="max-w-[280px] sm:max-w-[320px] md:max-w-[300px] w-full h-auto drop-shadow-xl"
     />
   ];
 
   const descriptions = [
     <div key="desc-1">
       <h2 className="text-xl font-bold mb-2 text-[#284139]">AI Bot</h2>
-      <p className="text-[#284139]">Interactúa con nuestro bot inteligente para obtener recomendaciones de recetas personalizadas según tus ingredientes.</p>
+      <p className="text-[#284139]">Interact with our intelligent bot to get personalized recipe recommendations based on your ingredients.</p>
     </div>,
     <div key="desc-2">
-      <h2 className="text-xl font-bold mb-2 text-[#284139]">Recetas</h2>
-      <p className="text-[#284139]">Explora una variedad de recetas sugeridas y encuentra inspiración para tus próximas comidas.</p>
+      <h2 className="text-xl font-bold mb-2 text-[#284139]">Recipes</h2>
+      <p className="text-[#284139]">Explore a variety of suggested recipes and find inspiration for your next meals.</p>
     </div>,
     <div key="desc-3">
-      <h2 className="text-xl font-bold mb-2 text-[#284139]">Tarjeta de Receta</h2>
-      <p className="text-[#284139]">Consulta los detalles de cada receta, incluyendo ingredientes, pasos y consejos útiles.</p>
+      <h2 className="text-xl font-bold mb-2 text-[#284139]">Recipe Card</h2>
+      <p className="text-[#284139]">View the details of each recipe, including ingredients, steps, and useful tips.</p>
     </div>
   ];
 

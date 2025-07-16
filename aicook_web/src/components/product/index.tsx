@@ -8,34 +8,34 @@ export default function Product() {
       key="adding"
       src="/mockups/adding.png"
       alt="Add Ingredient Screen"
-      className="max-w-[160px] sm:max-w-[220px] md:max-w-[300px] w-full h-auto drop-shadow-xl"
+      className="max-w-[280px] sm:max-w-[320px] md:max-w-[300px] w-full h-auto drop-shadow-xl"
     />,
     <img
       key="adding-det"
       src="/mockups/adding_det.png"
       alt="Add Ingredient Details Screen"
-      className="max-w-[140px] sm:max-w-[220px] md:max-w-[300px] w-full h-auto drop-shadow-xl"
+      className="max-w-[280px] sm:max-w-[320px] md:max-w-[300px] w-full h-auto drop-shadow-xl"
     />,
     <img
       key="cupboard"
       src="/mockups/cupboard.png"
       alt="Cupboard Screen"
-      className="max-w-[140px] sm:max-w-[220px] md:max-w-[300px] w-full h-auto drop-shadow-xl"
+      className="max-w-[280px] sm:max-w-[320px] md:max-w-[300px] w-full h-auto drop-shadow-xl"
     />
   ];
 
   const descriptions = [
     <div key="desc-1">
-      <h2 className="text-xl font-bold mb-2 text-[#284139]">Agregar Ingrediente</h2>
-      <p className="text-[#284139]">Pantalla para añadir nuevos ingredientes a tu despensa de manera rápida y sencilla.</p>
+      <h2 className="text-xl font-bold mb-2 text-[#284139]">Add Ingredient</h2>
+      <p className="text-[#284139]">Add new ingredients to your pantry quickly and easily.</p>
     </div>,
     <div key="desc-2">
-      <h2 className="text-xl font-bold mb-2 text-[#284139]">Detalles del Ingrediente</h2>
-      <p className="text-[#284139]">Visualiza y edita la información detallada de cada ingrediente, incluyendo cantidad y fecha de caducidad.</p>
+      <h2 className="text-xl font-bold mb-2 text-[#284139]">Ingredient Details</h2>
+      <p className="text-[#284139]">View and edit the detailed information of each ingredient, including quantity and expiration date.</p>
     </div>,
     <div key="desc-3">
-      <h2 className="text-xl font-bold mb-2 text-[#284139]">Tu Despensa</h2>
-      <p className="text-[#284139]">Consulta todos los ingredientes disponibles en tu despensa y gestiona tu inventario fácilmente.</p>
+      <h2 className="text-xl font-bold mb-2 text-[#284139]">Your Pantry</h2>
+      <p className="text-[#284139]">View all ingredients available in your pantry and manage your inventory easily.</p>
     </div>
   ];
 
