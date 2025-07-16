@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { FadeInMotion } from "../animations/motion";
 
 export default function LandingPage() {
@@ -27,15 +28,19 @@ export default function LandingPage() {
                     </div>
                     {/* Columna derecha: Mockups */}
                     <div className="flex flex-row md:flex-row items-center justify-center w-full md:w-1/3 h-full md:h-full gap-4 md:gap-6 px-6 md:px-6 py-8 md:py-0">
-                        <img
+                        <Image
                             src="/mockups/first.png"
                             alt="First Screen"
                             className="max-w-[280px] sm:max-w-[320px] md:max-w-[300px] w-full h-auto drop-shadow-xl"
+                            width={280}
+                            height={280}
                         />
-                        <img
+                        <Image
                             src="/mockups/signup.png"
                             alt="Signup Screen"
                             className="hidden md:block max-w-[140px] sm:max-w-[180px] md:max-w-[260px] w-full h-auto drop-shadow-xl"
+                            width={280}
+                            height={280}
                         />
                     </div>
                 </div>

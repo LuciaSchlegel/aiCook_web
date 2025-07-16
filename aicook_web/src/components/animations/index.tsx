@@ -1,8 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { useState, useEffect } from "react";
-
-const LOGO_SIZE = 120; // default mobile
 
 const logoVariants = {
   initial: { opacity: 0, scale: 0.9 },
@@ -34,10 +33,12 @@ export function AnimatedWelcome() {
         animate="visible"
         className="flex items-center justify-center z-10"
       >
-        <img
+        <Image
           src="/logo.svg"
           alt="Logo"
           className="w-[120px] h-[120px] sm:w-[180px] sm:h-[180px] md:w-[220px] md:h-[220px] drop-shadow-lg"
+          width={120}
+          height={120}
         />
       </motion.div>
       {/* Placeholder reservado para el texto */}

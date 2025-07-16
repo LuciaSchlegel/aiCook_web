@@ -1,26 +1,33 @@
 "use client"
+import Image from "next/image";
 import { FadeInMotion } from "../animations/motion"
 import SwiperComponent from "../swiper";
 
 export default function BotAndRecipes() {
   const slides = [
-    <img
+    <Image
       key="ai-bot"
       src="/mockups/ai_bot.png"
       alt="AI Bot Screen"
       className="max-w-[280px] sm:max-w-[320px] md:max-w-[300px] w-full h-auto drop-shadow-xl"
+      width={280}
+      height={280}
     />,
-    <img
+    <Image
       key="recipes"
       src="/mockups/recipes.png"
       alt="Recipes Screen"
       className="max-w-[280px] sm:max-w-[320px] md:max-w-[300px] w-full h-auto drop-shadow-xl"
+      width={280}
+      height={280}
     />,
-    <img
+    <Image
       key="recipe-card"
       src="/mockups/recipe_card.png"
       alt="Recipe Card Screen"
       className="max-w-[280px] sm:max-w-[320px] md:max-w-[300px] w-full h-auto drop-shadow-xl"
+      width={280}
+      height={280}
     />
   ];
 

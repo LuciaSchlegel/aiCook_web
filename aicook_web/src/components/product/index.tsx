@@ -1,26 +1,33 @@
 "use client"
+import Image from "next/image";
 import { FadeInMotion } from "../animations/motion";
 import SwiperComponent from "../swiper";
 
 export default function Product() {
   const slides = [
-    <img
+    <Image
       key="adding"
       src="/mockups/adding.png"
       alt="Add Ingredient Screen"
       className="max-w-[280px] sm:max-w-[320px] md:max-w-[300px] w-full h-auto drop-shadow-xl"
+      width={280}
+      height={280}
     />,
-    <img
+    <Image
       key="adding-det"
       src="/mockups/adding_det.png"
       alt="Add Ingredient Details Screen"
       className="max-w-[280px] sm:max-w-[320px] md:max-w-[300px] w-full h-auto drop-shadow-xl"
+      width={280}
+      height={280}
     />,
-    <img
+    <Image
       key="cupboard"
       src="/mockups/cupboard.png"
       alt="Cupboard Screen"
       className="max-w-[280px] sm:max-w-[320px] md:max-w-[300px] w-full h-auto drop-shadow-xl"
+      width={280}
+      height={280}
     />
   ];
 
