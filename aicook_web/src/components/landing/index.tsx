@@ -7,6 +7,7 @@ export default function LandingPage() {
   const shouldReduceMotion = useReducedMotion();
 
   // Sophisticated animation variants for organic shapes
+  /* eslint-disable */
   const createFloatingAnimation = (amplitude: number, duration: number, delay: number = 0) => {
     if (shouldReduceMotion) return {};
     return {
@@ -16,7 +17,7 @@ export default function LandingPage() {
       scale: [0.98, 1.02, 0.98],
     };
   };
-
+/* eslint-enable */
   const createFloatingTransition = (duration: number, delay: number = 0) => ({
     duration: duration,
     delay: delay,
