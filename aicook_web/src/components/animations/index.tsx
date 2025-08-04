@@ -19,13 +19,12 @@ export function AnimatedWelcome() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowText(true);
-    }, 1000); // espera a que termine el logo
-
+    }, 1000);
     return () => clearTimeout(timer);
   }, []);
 
   return (
-    <div className="relative flex flex-col font-casta items-center justify-center min-h-screen w-screen overflow-hidden" style={{ minHeight: '100vh', width: '100vw' }}>
+    <div className="relative flex flex-col font-casta items-center justify-center min-h-screen w-full overflow-hidden px-4">
       {/* Logo */}
       <motion.div
         variants={logoVariants}
@@ -36,22 +35,28 @@ export function AnimatedWelcome() {
         <Image
           src="/logo.svg"
           alt="Logo"
-          className="w-[120px] h-[120px] sm:w-[180px] sm:h-[180px] md:w-[220px] md:h-[220px] drop-shadow-lg"
-          width={120}
-          height={120}
+          className="w-20 h-20 xs:w-24 xs:h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-44 lg:h-44 drop-shadow-lg"
+          width={176}
+          height={176}
+          priority
         />
       </motion.div>
-      {/* Placeholder reservado para el texto */}
-      <div className="flex items-center justify-center w-full mt-4 z-10" style={{ minHeight: '120px' }}>
+
+      {/* Text Container */}
+      <div className="flex items-center justify-center w-full mt-4 z-10 min-h-[100px] sm:min-h-[120px]">
         {showText && (
           <motion.div
             variants={textVariants}
             initial="hidden"
             animate="visible"
-            className="flex flex-col items-center"
+            className="flex flex-col items-center max-w-4xl mx-auto"
           >
-            <h1 className="text-3xl sm:text-5xl md:text-8xl font-light tracking-wider text-center">Welcome to ai.Cook</h1>
-            <p className="text-base sm:text-xl md:text-2xl mt-4 text-center">Your personal AI-powered cooking assistant.</p>
+            <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-light tracking-wider text-center leading-tight">
+              Welcome to ai.Cook
+            </h1>
+            <p className="text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl mt-2 sm:mt-4 text-center max-w-2xl px-4">
+              Your personal AI-powered cooking assistant.
+            </p>
           </motion.div>
         )}
       </div>

@@ -21,8 +21,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         {/* Background grain image global */}
         <div
+          style={{ backgroundImage: "url('/images/back.svg')", pointerEvents: 'none', backgroundRepeat: 'repeat', opacity: 0.5 }}
           className="fixed inset-0 z-0 bg-center w-screen h-screen"
-          style={{ backgroundImage: "url('/images/grain.svg')", pointerEvents: 'none', backgroundRepeat: 'repeat' }}
           aria-hidden="true"
         />
         <Header />

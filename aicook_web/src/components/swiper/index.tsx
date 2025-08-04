@@ -15,9 +15,9 @@ export default function SwiperComponent({ slides, descriptions }: SwiperComponen
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <div className="flex flex-col lg:flex-row w-full max-w-7xl mx-auto items-stretch justify-center gap-6 lg:gap-12 px-4 lg:px-6 py-12 md:py-20 overflow-visible"> {/* items-stretch y py generoso para evitar cortes */}
+    <div className="flex flex-col lg:flex-row w-full max-w-7xl mx-auto items-stretch justify-center gap-4 sm:gap-6 lg:gap-12 px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16 lg:py-20 overflow-visible">
       {/* Carousel Container */}
-      <div className="w-full lg:w-1/2 xl:w-2/5 flex items-center justify-center relative"> {/* overflow-hidden restaurado */}
+      <div className="w-full lg:w-1/2 xl:w-2/5 flex items-center justify-center relative min-h-[400px] sm:min-h-[500px] md:min-h-[600px]">
         <Swiper
           spaceBetween={30}
           slidesPerView={1}
@@ -57,12 +57,12 @@ export default function SwiperComponent({ slides, descriptions }: SwiperComponen
 
       {/* Description Container */}
       <div className="w-full lg:w-1/2 xl:w-3/5 flex flex-col items-start justify-center">
-        <div className="bg-white/80 backdrop-blur-sm rounded-xl p-6 lg:p-8 shadow-lg border border-[#284139]/10 min-h-[180px] lg:min-h-[220px] w-full transition-all duration-500 ease-out hover:shadow-xl hover:bg-white/90">
+        <div className="bg-white/80 backdrop-blur-sm rounded-xl p-4 sm:p-6 lg:p-8 shadow-lg border border-[#284139]/10 min-h-[200px] sm:min-h-[220px] lg:min-h-[240px] w-full transition-all duration-500 ease-out hover:shadow-xl hover:bg-white/90">
           <div className="transition-all duration-500 ease-out">
             {descriptions[activeIndex]}
           </div>
           {/* Paginación personalizada, ahora en la card de descripción */}
-          <div className="flex space-x-3 mt-6 w-full justify-start">
+          <div className="flex space-x-2 sm:space-x-3 mt-4 sm:mt-6 w-full justify-start">
             {descriptions.map((_, idx) => (
               <div
                 key={idx}
@@ -81,7 +81,7 @@ export default function SwiperComponent({ slides, descriptions }: SwiperComponen
 
       <style jsx>{`
         .elegant-swiper {
-          --swiper-navigation-color: #284139;
+          --swiper-navigation-color: #ffffff !important;
           --swiper-pagination-color: #284139;
           --swiper-navigation-size: 18px;
           --swiper-pagination-bullet-size: 8px;
@@ -94,21 +94,23 @@ export default function SwiperComponent({ slides, descriptions }: SwiperComponen
           border-radius: 50%;
           width: 36px;
           height: 36px;
-          box-shadow: 0 2px 12px rgba(40, 65, 57, 0.1);
+          box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
           transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-          border: 1px solid rgba(40, 65, 57, 0.1);
+          border: 1px solid rgba(0, 0, 0, 0.1);
         }
         
         .elegant-swiper .swiper-button-next:after,
         .elegant-swiper .swiper-button-prev:after {
-          color: #284139;
+          color: #ffffff !important;
           font-weight: bold;
+          text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+          font-size: var(--swiper-navigation-size);
         }
         
         .elegant-swiper .swiper-button-next:hover,
         .elegant-swiper .swiper-button-prev:hover {
           transform: scale(1.05);
-          box-shadow: 0 4px 16px rgba(40, 65, 57, 0.15);
+          box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
           background: rgba(255, 255, 255, 1);
         }
         
@@ -125,13 +127,19 @@ export default function SwiperComponent({ slides, descriptions }: SwiperComponen
         @media (max-width: 768px) {
           .elegant-swiper .swiper-button-next,
           .elegant-swiper .swiper-button-prev {
-            width: 32px;
-            height: 32px;
-            --swiper-navigation-size: 16px;
+            width: 28px;
+            height: 28px;
+            --swiper-navigation-size: 14px;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.25);
           }
-          /* Ajuste responsivo: bullets más cerca y padding menor */
-          .elegant-swiper .swiper-pagination {
-            bottom: -28px;
+        }
+        
+        @media (max-width: 475px) {
+          .elegant-swiper .swiper-button-next,
+          .elegant-swiper .swiper-button-prev {
+            width: 24px;
+            height: 24px;
+            --swiper-navigation-size: 12px;
           }
         }
         /* Opcional: en mobile, usar aspect-ratio para mockup más cuadrado */
