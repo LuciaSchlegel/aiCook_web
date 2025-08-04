@@ -80,7 +80,7 @@ export default function BotAndRecipes() {
         Explore a selection of suggested recipes and find inspiration for your next meals.
       </p>
       <p className="text-sm sm:text-base md:text-lg text-[#284139]/70 leading-relaxed">
-        ai.Cook's recipe database is constantly updated and enriched with new recipes, so you can always find something new.
+        ai.Cook&apos;s recipe database is constantly updated and enriched with new recipes, so you can always find something new.
       </p>
       <p className="text-sm sm:text-base md:text-lg text-[#284139]/70 leading-relaxed">
         Our algorithms will suggest you the best recipes according to your available ingredients, preferences, and more.
@@ -109,7 +109,7 @@ export default function BotAndRecipes() {
         They are designed to be easy to understand, use, and follow.
       </p>
       <p className="text-sm sm:text-base md:text-lg text-[#284139]/70 leading-relaxed">
-        In case you're not familiar with an ingredient or quantity unit, you can just jump into our integrated chatbot, and it will give you all the assistance you need.
+        In case you&apos;re not familiar with an ingredient or quantity unit, you can just jump into our integrated chatbot, and it will give you all the assistance you need.
       </p>
       <div className="flex flex-wrap gap-2 mt-4">
         <span className="px-3 py-1 bg-[#284139]/10 text-[#284139] text-xs rounded-full border border-[#284139]/20">
@@ -131,7 +131,7 @@ export default function BotAndRecipes() {
         </h2>
       </div>
       <p className="text-base sm:text-lg md:text-xl text-[#284139]/80 leading-relaxed">
-        In a matter of seconds, you'll get a top 3 of recipes that match your available ingredients, diets, and/or personal preferences.
+        In a matter of seconds, you&apos;ll get a top 3 of recipes that match your available ingredients, diets, and/or personal preferences.
       </p>
       <p className="text-sm sm:text-base md:text-lg text-[#284139]/70 leading-relaxed">
         You can also go further and ask for more recipes, ingredients substitution, useful tips, and more.

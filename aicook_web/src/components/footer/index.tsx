@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -6,7 +7,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between px-3 xs:px-4 sm:px-6 lg:px-8 py-4 xs:py-5 sm:py-6 gap-3 xs:gap-4 sm:gap-6 font-[Casta] text-sm">
         {/* Logo y nombre */}
         <div className="flex items-center gap-2">
-          <img src="/logo.svg" alt="AI Cook Logo" className="h-6 sm:h-8 w-auto" />
+          <Image src="/logo.svg" alt="AI Cook Logo" width={32} height={32} className="h-6 sm:h-8 w-auto" />
           <span className="tracking-widest font-light text-sm sm:text-base">ai.Cook</span>
         </div>
 

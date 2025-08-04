@@ -1,5 +1,5 @@
 "use client";
-import { motion, MotionValue, useReducedMotion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import React from "react";
 
 interface FadeInMotionProps {

@@ -65,7 +65,7 @@ export default function Product() {
         </h2>
       </div>
       <p className="text-base sm:text-lg md:text-xl text-[#284139]/80 leading-relaxed">
-        You only have to enter your ingredient's quantity, the app will do the rest.
+        You only have to enter your ingredient&apos;s quantity, the app will do the rest.
       </p>
       <p className="text-sm sm:text-base md:text-lg text-[#284139]/70 leading-relaxed">
         Nutritional information, availability tracking, and more will be performed automatically by the integrated AI.
