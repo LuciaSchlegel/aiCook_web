@@ -15,6 +15,20 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const targetId = e.currentTarget.getAttribute('href')?.replace('/#', '');
+    if (targetId) {
+      const targetElement = document.getElementById(targetId);
+      if (targetElement) {
+        targetElement.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start',
+        });
+      }
+    }
+  };
+
   return (
     <header
       className={`backdrop-blur-md transition-all duration-500 fixed top-0 left-0 w-full z-50 ${
@@ -33,7 +47,8 @@ export default function Header() {
     >
       <div className="flex justify-between items-center p-3 sm:p-4 transition-all duration-500 max-w-7xl mx-auto">
         <Link
-          href="/"
+          href="/#bot-and-recipes"
+          onClick={handleSmoothScroll}
           className="text-sm sm:text-base md:text-lg lg:text-xl transition-all duration-300 hover:scale-105 active:scale-95 text-[#284139] font-light tracking-wide"
           style={{ textShadow: '0 1px 2px rgba(40, 65, 57, 0.1)' }}
         >
@@ -42,19 +57,18 @@ export default function Header() {
 
         <Link
           href="mailto:jointhewaitlist@aicook.com"
-          className="text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl transition-all duration-300 hover:scale-105 active:scale-95 text-[#284139] font-light tracking-wide text-center px-2"
+          className="text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl transition-all duration-300 hover:scale-105 active:scale-95 text-[#284139] font-light tracking-wide text-center px-2 max-w-[50vw] xs:max-w-[60vw] sm:max-w-none"
           style={{ 
             textShadow: '0 1px 2px rgba(40, 65, 57, 0.1)',
-            wordBreak: 'break-all',
-            maxWidth: '60vw'
           }}
         >
-          <span className="hidden sm:inline">jointhewaitlist@aicook.com</span>
-          <span className="sm:hidden">join waitlist</span>
+          <span className="hidden md:inline">jointhewaitlist@aicook.com</span>
+          <span className="hidden xs:inline md:hidden">join@aicook.com</span>
         </Link>
 
         <Link
-          href="/register"
+          href="/#product"
+          onClick={handleSmoothScroll}
           className="text-sm sm:text-base md:text-lg lg:text-xl transition-all duration-300 hover:scale-105 active:scale-95 text-[#284139] font-light tracking-wide"
           style={{ textShadow: '0 1px 2px rgba(40, 65, 57, 0.1)' }}
         >

@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <footer className="w-full bg-[#284139] text-[#e8e4d9] border-t border-[#e8e4d9]/10 relative z-10">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between px-4 sm:px-6 lg:px-8 py-4 gap-4 font-[Casta] text-sm">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between px-3 xs:px-4 sm:px-6 lg:px-8 py-4 xs:py-5 sm:py-6 gap-3 xs:gap-4 sm:gap-6 font-[Casta] text-sm">
         {/* Logo y nombre */}
         <div className="flex items-center gap-2">
           <img src="/logo.svg" alt="AI Cook Logo" className="h-6 sm:h-8 w-auto" />
@@ -17,12 +17,6 @@ export default function Footer() {
             className="hover:underline transition text-xs sm:text-sm md:text-base"
           >
             Contact Us
-          </Link>
-          <Link 
-            href="/register" 
-            className="hover:underline transition text-xs sm:text-sm md:text-base"
-          >
-            About
           </Link>
         </div>
 

@@ -1,5 +1,5 @@
 "use client";
-import { motion } from "framer-motion";
+import { motion, MotionValue, useReducedMotion } from "framer-motion";
 import React from "react";
 
 interface FadeInMotionProps {
@@ -16,19 +16,41 @@ interface FadeInMotionProps {
 export const FadeInMotion: React.FC<FadeInMotionProps> = ({
   children,
   delay = 0.1,
-  duration = 0.7,
+  duration = 0.8,
   className = "",
-}) => (
-  <motion.div
-    initial={{ opacity: 0, y: 24 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true, amount: 0.6 }}
-    transition={{ duration, delay, ease: "easeOut" }}
-    className={className}
-  >
-    {children}
-  </motion.div>
-);
+}) => {
+  const shouldReduceMotion = useReducedMotion();
+  
+  const variants = {
+    hidden: { 
+      opacity: 0, 
+      y: shouldReduceMotion ? 0 : 20,
+    },
+    visible: { 
+      opacity: 1, 
+      y: 0,
+    }
+  };
+
+  return (
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.3, margin: "0px 0px -100px 0px" }}
+      transition={{ 
+        duration: shouldReduceMotion ? 0.1 : duration, 
+        delay: shouldReduceMotion ? 0 : delay, 
+        ease: [0.25, 0.46, 0.45, 0.94],
+        type: "tween"
+      }}
+      variants={variants}
+      className={className}
+      data-framer-motion
+    >
+      {children}
+    </motion.div>
+  );
+};
 
 interface ZoomInMotionProps {
   children: React.ReactNode;
@@ -44,20 +66,38 @@ interface ZoomInMotionProps {
 export const ZoomInMotion: React.FC<ZoomInMotionProps> = ({
   children,
   delay = 0.2,
-  duration = 0.8,
+  duration = 0.9,
   className = "",
-}) => (
-  <motion.div
-    initial={{ opacity: 0, scale: 0.8 }}
-    whileInView={{ opacity: 1, scale: 1 }}
-    viewport={{ once: true, amount: 0.3 }}
-    transition={{ 
-      duration, 
-      delay, 
-      ease: [0.25, 0.46, 0.45, 0.94] // easeOutQuart
-    }}
-    className={className}
-  >
-    {children}
-  </motion.div>
-); 
+}) => {
+  const shouldReduceMotion = useReducedMotion();
+  
+  const variants = {
+    hidden: { 
+      opacity: 0, 
+      scale: shouldReduceMotion ? 1 : 0.9,
+    },
+    visible: { 
+      opacity: 1, 
+      scale: 1,
+    }
+  };
+
+  return (
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2, margin: "0px 0px -50px 0px" }}
+      transition={{ 
+        duration: shouldReduceMotion ? 0.1 : duration, 
+        delay: shouldReduceMotion ? 0 : delay, 
+        ease: [0.25, 0.46, 0.45, 0.94],
+        type: "tween"
+      }}
+      variants={variants}
+      className={className}
+      data-framer-motion
+    >
+      {children}
+    </motion.div>
+  );
+}; 
