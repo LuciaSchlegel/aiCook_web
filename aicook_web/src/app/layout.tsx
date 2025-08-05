@@ -22,7 +22,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {/* eslint-disable-next-line @next/next/no-page-custom-font */}
         <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet" />
         <title>{metadata.title}</title>
-        <meta name="description" content={metadata.description} />
       </head>
       <body>
         {/* Background grain image global */}
