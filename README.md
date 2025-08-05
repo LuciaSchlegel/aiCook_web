@@ -4,7 +4,7 @@ This is the official landing page for **ai.Cook**, an AI powered mobile app that
 
 ## 🌐 Live Site
 
-👉 [ai.Cook](https://aicook.website)
+👉 [ai.Cook.website](https://aicook.website)
 
 ## 📌 About This Project
 
