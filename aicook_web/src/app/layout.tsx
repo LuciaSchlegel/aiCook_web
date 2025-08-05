@@ -4,8 +4,13 @@ import Header from '@/components/header';
 import Footer from '@/components/footer';
 
 export const metadata = {
-  title: 'AI Cook',
+  title: 'ai.Cook',
   description: 'Your personal AI-powered cooking assistant',
+  icons: {
+    icon: '/favicon.svg',
+  },  
+  keywords: ['ai.Cook', 'AI', 'Cooking', 'Recipes', 'Personalized Recipes', 'Nutritional Goals'],
+  authors: [{ name: 'Lucia Schlegel', url: 'https://github.com/LuciaSchlegel' }],
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
