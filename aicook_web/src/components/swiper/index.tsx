@@ -27,7 +27,7 @@ export default function SwiperComponent({ slides, descriptions }: SwiperComponen
           loop={true}
           speed={2000}
           autoplay={{
-            delay: 3000,
+            delay: 2000,
             disableOnInteraction: false,
           }}
           navigation={true}
@@ -40,10 +40,7 @@ export default function SwiperComponent({ slides, descriptions }: SwiperComponen
             <SwiperSlide key={idx} className="overflow-hidden">
               <div className="flex items-center justify-center p-4 md:p-6">
                 <div className="relative group">
-                  <div className="transform transition-all duration-1000 ease-out group-hover:scale-[1.05]">
                     {slide}
-                  </div>
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#284139]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000 ease-out rounded-2xl pointer-events-none"></div>
                 </div>
               </div>
             </SwiperSlide>

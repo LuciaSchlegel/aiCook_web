@@ -8,11 +8,6 @@ interface FadeInMotionProps {
   duration?: number;
   className?: string;
 }
-
-/**
- * Componente genérico para animar fade in cualquier elemento hijo.
- * Uso: <FadeInMotion><img src="..." /></FadeInMotion>
- */
 export const FadeInMotion: React.FC<FadeInMotionProps> = ({
   children,
   delay = 0.1,
