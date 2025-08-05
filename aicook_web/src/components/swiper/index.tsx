@@ -63,15 +63,11 @@ export default function SwiperComponent({ slides, descriptions }: SwiperComponen
               {descriptions.map((_, idx) => (
                 <button
                   key={idx}
-                  className={`h-2 rounded-full transition-all duration-1000 ease-out ${
+                  className={`h-2 rounded-full ${
                     idx === activeIndex 
                       ? 'bg-[#284139] w-10' 
-                      : 'bg-[#284139]/20 w-4 hover:bg-[#284139]/40 hover:w-6'
+                      : 'bg-[#284139]/20 w-4'
                   }`}
-                  onClick={() => {
-                    // Simple pagination - just update the active index
-                    setActiveIndex(idx);
-                  }}
                 />
               ))}
             </div>
