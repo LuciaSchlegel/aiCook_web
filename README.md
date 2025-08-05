@@ -4,7 +4,7 @@ This is the official landing page for **ai.Cook**, an AI powered mobile app that
 
 ## 🌐 Live Site
 
-👉 [https://ai-cook-webpage-dg5zbmlpo-lucia-belen-guarinos-projects.vercel.app]
+👉 [ai.Cook Website Link](https://aicook.website)
 
 ## 📌 About This Project
 
