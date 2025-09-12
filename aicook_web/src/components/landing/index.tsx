@@ -278,38 +278,40 @@ export default function LandingPage() {
           </div>
 
           {/* Right Column: Mockups */}
-          <div className="flex flex-row items-center justify-center w-full md:w-1/2 min-h-[40vh] md:min-h-full gap-3 xs:gap-4 sm:gap-6 md:gap-8 px-4 sm:px-6 md:px-8 py-6 md:py-0">
-            <motion.div 
-              className="relative"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1.2, delay: 0.5, ease: [0.25, 0.46, 0.45, 0.94] as const }}
-            >
-              <Image
-                src="/mockups/first.png"
-                alt="First Screen"
-                className="w-full h-auto drop-shadow-2xl max-w-[180px] xs:max-w-[200px] sm:max-w-[240px] md:max-w-[280px] lg:max-w-[320px] xl:max-w-[360px]"
-                width={360}
-                height={640}
-                style={{ width: 'auto', height: 'auto' }}
-                priority
-              />
-            </motion.div>
-            <motion.div 
-              className="relative"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1.2, delay: 0.8, ease: [0.25, 0.46, 0.45, 0.94] as const }}
-            >
-              <Image
-                src="/mockups/signup.png"
-                alt="Signup Screen"
-                className="w-full h-auto drop-shadow-2xl max-w-[120px] xs:max-w-[140px] sm:max-w-[180px] md:max-w-[220px] lg:max-w-[260px] xl:max-w-[300px]"
-                width={300}
-                height={600}
-                style={{ width: 'auto', height: 'auto' }}
-              />
-            </motion.div>
+          <div className="flex items-end justify-center w-full md:w-1/2 min-h-[40vh] md:min-h-full px-4 sm:px-6 md:px-8 pr-8 sm:pr-12 md:pr-16 lg:pr-20 py-6 md:py-0 mb-8 sm:mb-12 md:mb-16 lg:mb-20">
+            <div className="flex flex-row items-end gap-1 xs:gap-2 sm:gap-3 md:gap-4">
+              <motion.div 
+                className="relative"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1.2, delay: 0.5, ease: [0.25, 0.46, 0.45, 0.94] as const }}
+              >
+                <Image
+                  src="/mockups/first_screen_iPhone.png"
+                  alt="First Screen iPhone"
+                  className="w-full h-auto drop-shadow-2xl max-w-[180px] xs:max-w-[200px] sm:max-w-[240px] md:max-w-[280px] lg:max-w-[320px] xl:max-w-[360px]"
+                  width={360}
+                  height={640}
+                  style={{ width: 'auto', height: 'auto' }}
+                  priority
+                />
+              </motion.div>
+              <motion.div 
+                className="relative"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1.2, delay: 0.8, ease: [0.25, 0.46, 0.45, 0.94] as const }}
+              >
+                <Image
+                  src="/mockups/first_screen_iPad.png"
+                  alt="First Screen iPad"
+                  className="w-full h-auto drop-shadow-2xl max-w-[220px] xs:max-w-[440px] sm:max-w-[480px] md:max-w-[520px] lg:max-w-[560px]"
+                  width={1024}
+                  height={1366}
+                  style={{ width: 'auto', height: 'auto' }}
+                />
+              </motion.div>
+            </div>
           </div>
         </div>
       </FadeInMotion>
