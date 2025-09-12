@@ -151,7 +151,7 @@ export default function BotAndRecipes() {
   ];
 
   return (
-    <div className="relative flex flex-col justify-center min-h-screen w-full bg-gradient-to-br from-[#E8E4D9] via-[#F5F3ED] to-[#E8E4D9] py-12 sm:py-16 lg:py-20 overflow-hidden" id="bot-and-recipes">
+    <div className="relative flex flex-col justify-center min-h-screen w-full bg-gradient-to-br from-[#E8E4D9]/90 via-[#F5F3ED]/85 to-[#E8E4D9]/90 py-12 sm:py-16 lg:py-20 overflow-hidden" id="bot-and-recipes">
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-20 left-10 w-32 h-32 bg-[#284139]/5 rounded-full blur-3xl"></div>

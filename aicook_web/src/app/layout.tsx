@@ -2,6 +2,7 @@ import React from 'react';
 import './globals.css';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
+import CookingBackgroundAnimation from '@/components/animations/CookingBackgroundAnimation';
 
 export const metadata = {
   title: 'ai.Cook',
@@ -26,13 +27,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         {/* Background grain image global */}
         <div
-          style={{ backgroundImage: "url('/images/back.svg')", pointerEvents: 'none', backgroundRepeat: 'repeat', opacity: 0.5 }}
+          style={{ backgroundImage: "url('/images/back.svg')", pointerEvents: 'none', opacity: 0.2 }}
           className="fixed inset-0 z-0 bg-center w-screen h-screen"
           aria-hidden="true"
         />
-        <Header />
-        {children}
-        <Footer />
+        <CookingBackgroundAnimation />
+        <div className="relative z-10">
+          <Header />
+          {children}
+          <Footer />
+        </div>
       </body>
     </html>
   );

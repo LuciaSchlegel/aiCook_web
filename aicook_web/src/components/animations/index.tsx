@@ -51,8 +51,8 @@ export function AnimatedWelcome() {
             animate="visible"
             className="flex flex-col items-center max-w-4xl mx-auto"
           >
-            <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-light tracking-wider text-center leading-tight">
-              Welcome to ai.Cook
+            <h1 className="text-2xl xs:text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-light tracking-wider text-center leading-tight">
+            ai.Cook
             </h1>
             <p className="text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl mt-2 sm:mt-4 text-center max-w-2xl px-4">
               Your personal AI-powered cooking assistant.

@@ -110,7 +110,7 @@ export default function Product() {
   ];
 
   return (
-    <div className="relative flex flex-col justify-center min-h-screen w-full bg-gradient-to-br from-white via-[#F8F6F2] to-[#F0EDE8] py-12 sm:py-16 lg:py-20 overflow-hidden" id="product">
+    <div className="relative flex flex-col justify-center min-h-screen w-full bg-gradient-to-br from-white/80 via-[#F8F6F2]/75 to-[#F0EDE8]/80 py-12 sm:py-16 lg:py-20 overflow-hidden" id="product">
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-20 right-10 w-32 h-32 bg-[#284139]/5 rounded-full blur-3xl"></div>

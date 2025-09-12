@@ -77,7 +77,7 @@ export default function LandingPage() {
   });
 
   return (
-    <div className="min-h-screen w-full bg-gradient-to-br from-[#E8E4D9] via-[#F1EDE7] to-[#E8E4D9] overflow-hidden">
+    <div className="min-h-screen w-full bg-gradient-to-br from-[#E8E4D9]/90 via-[#F1EDE7]/85 to-[#E8E4D9]/90 overflow-hidden">
       <FadeInMotion>
         <div className="flex flex-col md:flex-row min-h-screen w-full">
           {/* Left Column: Text */}
