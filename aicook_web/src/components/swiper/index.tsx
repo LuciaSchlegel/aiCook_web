@@ -28,11 +28,6 @@ export default function Swiper({ slides, descriptions }: SwiperProps) {
     setCurrentIndex((prev) => (prev + 1) % slides.length);
   };
 
-  const prevSlide = () => {
-    setDirection(-1);
-    setCurrentIndex((prev) => (prev - 1 + slides.length) % slides.length);
-  };
-
   const goToSlide = (index: number) => {
     setDirection(index > currentIndex ? 1 : -1);
     setCurrentIndex(index);
