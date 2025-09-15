@@ -1,82 +1,214 @@
 "use client";
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Autoplay } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import { ReactNode, useState } from 'react';
+import { ReactNode, useState, useEffect } from 'react';
+import { motion, AnimatePresence, easeOut } from 'framer-motion';
 
-interface SwiperComponentProps {
+interface SwiperProps {
   slides: ReactNode[];
   descriptions: ReactNode[];
 }
 
-export default function SwiperComponent({ slides, descriptions }: SwiperComponentProps) {
-  const [activeIndex, setActiveIndex] = useState(0);
+export default function Swiper({ slides, descriptions }: SwiperProps) {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [direction, setDirection] = useState(0);
+  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+
+  // Auto-advance slides
+  useEffect(() => {
+    if (!isAutoPlaying) return;
+    
+    const interval = setInterval(() => {
+      nextSlide();
+    }, 8500);
+
+    return () => clearInterval(interval);
+  }, [currentIndex, isAutoPlaying]);
+
+  const nextSlide = () => {
+    setDirection(1);
+    setCurrentIndex((prev) => (prev + 1) % slides.length);
+  };
+
+  const prevSlide = () => {
+    setDirection(-1);
+    setCurrentIndex((prev) => (prev - 1 + slides.length) % slides.length);
+  };
+
+  const goToSlide = (index: number) => {
+    setDirection(index > currentIndex ? 1 : -1);
+    setCurrentIndex(index);
+  };
+
+  const slideVariants = {
+    enter: (direction: number) => ({
+      x: direction > 0 ? 600 : -600,
+      opacity: 0,
+      scale: 0.95,
+      rotateY: direction > 0 ? 8 : -8,
+    }),
+    center: {
+      x: 0,
+      opacity: 1,
+      scale: 1,
+      rotateY: 0,
+    },
+    exit: (direction: number) => ({
+      x: direction < 0 ? 600 : -600,
+      opacity: 0,
+      scale: 0.95,
+      rotateY: direction < 0 ? 8 : -8,
+    }),
+  };
+
+  const contentVariants = {
+    enter: {
+      opacity: 0,
+      y: 20,
+      scale: 0.98,
+    },
+    center: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        delay: 0.2,
+        duration: 0.4,
+        ease: easeOut,
+      },
+    },
+    exit: {
+      opacity: 0,
+      y: -20,
+      scale: 0.98,
+    },
+  };
 
   return (
-    <div className="flex flex-col lg:flex-row w-full max-w-7xl mx-auto items-stretch justify-center gap-4 xs:gap-6 sm:gap-8 lg:gap-16 px-3 xs:px-4 sm:px-6 lg:px-8 py-6 xs:py-8 sm:py-12 md:py-16 lg:py-20 overflow-visible">
-      {/* Carousel Container */}
-      <div className="w-full lg:w-1/2 xl:w-2/5 flex items-center justify-center relative min-h-[320px] xs:min-h-[380px] sm:min-h-[450px] md:min-h-[500px] lg:min-h-[600px]">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#284139]/5 to-transparent rounded-3xl blur-3xl"></div>
+    <div className="flex flex-col lg:flex-row w-full max-w-7xl mx-auto items-center justify-center px-4 sm:px-6 lg:px-8 py-10 sm:py-14 md:py-18 lg:py-24">
+      
+      {/* Image Section */}
+      <div className="w-full lg:w-1/2 xl:w-2/5 flex items-center justify-center relative">
         
-        <Swiper
-          spaceBetween={30}
-          slidesPerView={1}
-          centeredSlides={true}
-          loop={true}
-          speed={2000}
-          autoplay={{
-            delay: 2000,
-            disableOnInteraction: false,
-          }}
-          navigation={true}
-          allowTouchMove={true}
-          modules={[Navigation, Autoplay]}
-          onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
-          className="w-full swiper-container overflow-hidden relative z-10"
-        >
-          {slides.map((slide, idx) => (
-            <SwiperSlide key={idx} className="overflow-hidden">
-              <div className="flex items-center justify-center p-4 md:p-6">
-                <div className="relative group">
-                    {slide}
-                </div>
+        {/* Subtle Background Elements */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-12 right-12 w-24 h-24 bg-gradient-to-br from-[#284139]/4 to-transparent rounded-full blur-2xl"></div>
+          <div className="absolute bottom-16 left-16 w-32 h-32 bg-gradient-to-tr from-[#284139]/3 to-transparent rounded-full blur-xl"></div>
+        </div>
+
+        {/* Main Slide Container */}
+        <div className="relative w-full max-w-md lg:max-w-lg xl:max-w-xl h-[400px] sm:h-[480px] md:h-[540px] lg:h-[600px] flex items-center justify-center" style={{ perspective: '800px' }}>
+          <AnimatePresence mode="wait" custom={direction}>
+            <motion.div
+              key={currentIndex}
+              custom={direction}
+              variants={slideVariants}
+              initial="enter"
+              animate="center"
+              exit="exit"
+              transition={{
+                x: { type: "spring", stiffness: 260, damping: 28 },
+                opacity: { duration: 0.35, ease: "easeInOut" },
+                scale: { duration: 0.35, ease: "easeInOut" },
+                rotateY: { duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] },
+              }}
+              className="absolute inset-0 flex items-center justify-center"
+              onMouseEnter={() => setIsAutoPlaying(false)}
+              onMouseLeave={() => setIsAutoPlaying(true)}
+            >
+              <div className="relative group">
+                {/* Refined Glow Effect */}
+                <div className="absolute -inset-5 bg-gradient-to-r from-[#284139]/6 via-transparent to-[#284139]/6 rounded-xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-800 ease-out"></div>
+                
+                {/* Soft Shadow */}
+                <div className="absolute -inset-3 bg-black/2 rounded-lg blur-lg transform translate-y-3 group-hover:translate-y-4 transition-all duration-500 ease-out"></div>
+                
+                {/* Image Container */}
+                <motion.div
+                  whileHover={{ scale: 1.01, y: -6 }}
+                  transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
+                  className="relative transform-gpu mb-12"
+                >
+                  {slides[currentIndex]}
+                </motion.div>
               </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+            </motion.div>
+          </AnimatePresence>
+        </div>
       </div>
 
-      {/* Description Container */}
-      <div className="w-full lg:w-1/2 xl:w-3/5 flex flex-col items-start justify-center">
-        <div className="relative bg-white/90 backdrop-blur-md rounded-2xl xs:rounded-3xl p-4 xs:p-5 sm:p-6 md:p-8 lg:p-10 shadow-2xl border border-[#284139]/10 min-h-[200px] xs:min-h-[230px] sm:min-h-[260px] md:min-h-[280px] lg:min-h-[300px] w-full transition-all duration-500 ease-out hover:shadow-3xl hover:bg-white/95 group">
-          <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#284139]/20 via-[#284139]/40 to-[#284139]/20 rounded-t-3xl"></div>
-          
-          <div className="relative z-10">
-            {descriptions[activeIndex]}
-          </div>
-          
-          {/* Pagination */}
-          <div className="flex items-center justify-between mt-6 sm:mt-8 w-full">
-            <div className="flex space-x-2 sm:space-x-3">
-              {descriptions.map((_, idx) => (
-                <button
-                  key={idx}
-                  className={`h-2 rounded-full ${
-                    idx === activeIndex 
-                      ? 'bg-[#284139] w-10' 
-                      : 'bg-[#284139]/20 w-4'
-                  }`}
-                />
-              ))}
-            </div>
+      {/* Enhanced Description Container with Responsive Spacing */}
+      <div className="w-full lg:w-1/2 xl:w-3/5 flex flex-col items-start justify-center mt-18 lg:mt-0 lg:ml-12 xl:ml-16">
+        <motion.div
+          layout
+          className="relative w-full"
+        >
+          {/* Subtle Glass Container */}
+          <div className="relative bg-white/80 backdrop-blur-md rounded-2xl sm:rounded-3xl p-6 sm:p-7 md:p-9 lg:p-11 shadow-2xl border border-[#284139]/6 min-h-[280px] sm:min-h-[300px] md:min-h-[320px] lg:min-h-[340px] w-full transition-all duration-700 ease-out hover:shadow-3xl hover:bg-white/88 group">
             
-            <div className="text-sm text-[#284139]/60 font-medium">
-              {activeIndex + 1} / {descriptions.length}
+            {/* Refined Border Accents */}
+            <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#284139]/20 to-transparent"></div>
+            <div className="absolute bottom-0 right-0 w-[1px] h-full bg-gradient-to-t from-transparent via-[#284139]/15 to-transparent"></div>
+            
+            {/* Subtle Floating Elements */}
+            <div className="absolute top-6 right-6 w-12 h-12 bg-gradient-to-br from-[#284139]/5 to-transparent rounded-full blur-lg"></div>
+            <div className="absolute bottom-8 left-6 w-8 h-8 bg-gradient-to-tr from-[#284139]/4 to-transparent rounded-full blur-md"></div>
+
+            {/* Content with Smooth Transitions */}
+            <div className="relative z-10 h-full flex flex-col">
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={currentIndex}
+                  variants={contentVariants}
+                  initial="enter"
+                  animate="center"
+                  exit="exit"
+                  transition={{
+                    delay: 0.15,
+                    duration: 0.45,
+                    ease: [0.25, 0.46, 0.45, 0.94],
+                  }}
+                  className="flex-1"
+                >
+                  {descriptions[currentIndex]}
+                </motion.div>
+              </AnimatePresence>
+
+              {/* Refined Pagination Footer */}
+              <motion.div 
+                layout
+                className="flex items-center justify-between mt-7 sm:mt-8 w-full pt-6 sm:pt-7 border-t border-[#284139]/6"
+              >
+                <div className="flex space-x-2.5">
+                  {descriptions.map((_, idx: number) => (
+                    <motion.button
+                      key={idx}
+                      onClick={() => goToSlide(idx)}
+                      whileHover={{ scale: 1.15 }}
+                      whileTap={{ scale: 0.9 }}
+                      className={`h-2 sm:h-2.5 rounded-full transition-all duration-600 ease-out ${
+                        idx === currentIndex 
+                          ? 'bg-gradient-to-r from-[#284139]/85 to-[#284139]/65 w-10 sm:w-12 shadow-sm' 
+                          : 'bg-[#284139]/12 w-4 sm:w-5 hover:bg-[#284139]/25 hover:w-6 sm:hover:w-7'
+                      }`}
+                    />
+                  ))}
+                </div>
+                
+                <div className="flex items-center space-x-2.5">
+                  <div className="text-xs font-light text-[#284139]/35 tracking-wider">
+                    {String(currentIndex + 1).padStart(2, '0')}
+                  </div>
+                  <div className="w-6 sm:w-7 h-[1px] bg-gradient-to-r from-[#284139]/15 to-transparent"></div>
+                  <div className="text-xs font-medium text-[#284139]/55">
+                    {String(descriptions.length).padStart(2, '0')}
+                  </div>
+                </div>
+              </motion.div>
             </div>
+
+            {/* Very Subtle Shine Effect */}
+            <div className="absolute inset-0 bg-gradient-to-br from-white/8 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-900 ease-out rounded-2xl sm:rounded-3xl pointer-events-none"></div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

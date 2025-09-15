@@ -1,7 +1,7 @@
 "use client"
 import Image from "next/image";
 import { FadeInMotion } from "../animations/motion"
-import SwiperComponent from "../swiper";
+import Swiper from "../swiper";
 
 export default function BotAndRecipes() {
   const slides = [
@@ -169,7 +169,7 @@ export default function BotAndRecipes() {
             Experience the future of cooking with our AI-powered assistant
           </p>
         </div>
-          <SwiperComponent slides={slides} descriptions={descriptions} />
+          <Swiper slides={slides} descriptions={descriptions} />
         </div>
       </FadeInMotion>
     </div>
