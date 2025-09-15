@@ -15,6 +15,16 @@ export default function Product() {
       style={{ width: 'auto', height: 'auto' }}
     />,
     <Image
+    key="customing"
+    src="/mockups/add_custom.png"
+    alt="Add Ingredient Screen"
+    className="w-full h-auto drop-shadow-2xl max-w-[220px] sm:max-w-[260px] md:max-w-[300px] lg:max-w-[340px]"
+    width={360}
+    height={640}
+    style={{ width: 'auto', height: 'auto' }}
+  />,
+
+    <Image
       key="adding-det"
       src="/mockups/edit_ing.png"
       alt="Add Ingredient Details Screen"
@@ -57,7 +67,30 @@ export default function Product() {
         </span>
       </div>
     </div>,
-    <div key="desc-2" className="space-y-4">
+        <div key="desc-2" className="space-y-4">
+        <div className="flex items-center gap-3 mb-4">
+          <div className="w-2 h-2 bg-[#284139] rounded-full"></div>
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#284139] leading-tight">
+            Personalized Ingredients
+          </h2>
+        </div>
+        <p className="text-base sm:text-lg md:text-xl text-[#284139]/80 leading-relaxed">
+          You can add your own ingredients to your pantry, or you can choose from a rich ingredient list.
+        </p>
+        <div className="flex flex-wrap gap-2 mt-4">
+          <span className="px-3 py-1 bg-[#284139]/10 text-[#284139] text-xs rounded-full border border-[#284139]/20">
+            Custom Ingredients
+          </span>
+          <span className="px-3 py-1 bg-[#284139]/10 text-[#284139] text-xs rounded-full border border-[#284139]/20">
+            Personalized
+          </span>
+          <span className="px-3 py-1 bg-[#284139]/10 text-[#284139] text-xs rounded-full border border-[#284139]/20">
+            Rich Database
+          </span>
+        </div>
+      </div>,
+  
+    <div key="desc-3" className="space-y-4">
       <div className="flex items-center gap-3 mb-4">
         <div className="w-2 h-2 bg-[#284139] rounded-full"></div>
         <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#284139] leading-tight">
@@ -82,7 +115,7 @@ export default function Product() {
         </span>
       </div>
     </div>,
-    <div key="desc-3" className="space-y-4">
+    <div key="desc-4" className="space-y-4">
       <div className="flex items-center gap-3 mb-4">
         <div className="w-2 h-2 bg-[#284139] rounded-full"></div>
         <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#284139] leading-tight">
