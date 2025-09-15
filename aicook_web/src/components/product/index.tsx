@@ -7,7 +7,7 @@ export default function Product() {
   const slides = [
     <Image
       key="adding"
-      src="/mockups/adding.png"
+      src="/mockups/add_ing.png"
       alt="Add Ingredient Screen"
       className="w-full h-auto drop-shadow-2xl max-w-[220px] sm:max-w-[260px] md:max-w-[300px] lg:max-w-[340px]"
       width={360}
@@ -16,7 +16,7 @@ export default function Product() {
     />,
     <Image
       key="adding-det"
-      src="/mockups/adding_det.png"
+      src="/mockups/edit_ing.png"
       alt="Add Ingredient Details Screen"
       className="w-full h-auto drop-shadow-2xl max-w-[220px] sm:max-w-[260px] md:max-w-[300px] lg:max-w-[340px]"
       width={360}
@@ -25,7 +25,7 @@ export default function Product() {
     />,
     <Image
       key="cupboard"
-      src="/mockups/cupboard.png"
+      src="/mockups/cupboard_screen.png"
       alt="Cupboard Screen"
       className="w-full h-auto drop-shadow-2xl max-w-[220px] sm:max-w-[260px] md:max-w-[300px] lg:max-w-[340px]"
       width={360}

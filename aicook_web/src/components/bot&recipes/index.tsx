@@ -7,7 +7,7 @@ export default function BotAndRecipes() {
   const slides = [
     <Image
       key="ai-bot"
-      src="/mockups/ai_bot.png"
+      src="/mockups/ai_recomm.png"
       alt="AI Bot Screen"
       className="w-full h-auto drop-shadow-2xl max-w-[240px] sm:max-w-[280px] md:max-w-[320px] lg:max-w-[360px]"
       width={360}
@@ -25,7 +25,7 @@ export default function BotAndRecipes() {
     />,
     <Image
       key="recipe-card"
-      src="/mockups/recipe_card.png"
+      src="/mockups/recipe_ext.png"
       alt="Recipe Card Screen"
       className="w-full h-auto drop-shadow-2xl max-w-[240px] sm:max-w-[280px] md:max-w-[320px] lg:max-w-[360px]"
       width={360}
@@ -34,7 +34,7 @@ export default function BotAndRecipes() {
     />,
     <Image
       key="recipe-recommendations"
-      src="/mockups/ai_recomm.png"
+      src="/mockups/ai_recomm2.png"
       alt="Recipe Recommendations Screen"
       className="w-full h-auto drop-shadow-2xl max-w-[240px] sm:max-w-[280px] md:max-w-[320px] lg:max-w-[360px]"
       width={360}
