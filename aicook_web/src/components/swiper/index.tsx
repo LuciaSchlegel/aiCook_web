@@ -109,16 +109,10 @@ export default function Swiper({ slides, descriptions }: SwiperProps) {
               onMouseEnter={() => setIsAutoPlaying(false)}
               onMouseLeave={() => setIsAutoPlaying(true)}
             >
-              <div className="relative group">
-                {/* Refined Glow Effect */}
-                <div className="absolute -inset-5 bg-gradient-to-r from-[#284139]/6 via-transparent to-[#284139]/6 rounded-xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-800 ease-out"></div>
-                
-                {/* Soft Shadow */}
-                <div className="absolute -inset-3 bg-black/2 rounded-lg blur-lg transform translate-y-3 group-hover:translate-y-4 transition-all duration-500 ease-out"></div>
-                
+              <div className="relative">
                 {/* Image Container */}
                 <motion.div
-                  whileHover={{ scale: 1.01, y: -6 }}
+                  whileHover={{ scale: 1.01 }}
                   transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
                   className="relative transform-gpu mb-12"
                 >

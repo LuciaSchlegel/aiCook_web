@@ -47,9 +47,8 @@ export default function Product() {
   const descriptions = [
     <div key="desc-1" className="space-y-4">
       <div className="flex items-center gap-3 mb-4">
-        <div className="w-2 h-2 bg-[#284139] rounded-full"></div>
-        <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#284139] leading-tight">
-          Smart Ingredient Management
+        <h2 className="font-casta text-3xl sm:text-4xl md:text-5xl text-[#284139] leading-tight" style={{ fontWeight: '500', letterSpacing: '0.05em', textShadow: '0 0 10px rgba(0, 0, 0, 0.1)', lineHeight: '1.2' }}>
+        Smart Ingredient Management
         </h2>
       </div>
       <p className="text-base sm:text-lg md:text-xl text-[#284139]/80 leading-relaxed">
@@ -69,9 +68,8 @@ export default function Product() {
     </div>,
         <div key="desc-2" className="space-y-4">
         <div className="flex items-center gap-3 mb-4">
-          <div className="w-2 h-2 bg-[#284139] rounded-full"></div>
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#284139] leading-tight">
-            Personalized Ingredients
+          <h2 className="font-casta text-3xl sm:text-4xl md:text-5xl text-[#284139] leading-tight" style={{ fontWeight: '500', letterSpacing: '0.05em', textShadow: '0 0 10px rgba(0, 0, 0, 0.1)', lineHeight: '1.2' }}>
+          Personalized Ingredients
           </h2>
         </div>
         <p className="text-base sm:text-lg md:text-xl text-[#284139]/80 leading-relaxed">
@@ -92,9 +90,8 @@ export default function Product() {
   
     <div key="desc-3" className="space-y-4">
       <div className="flex items-center gap-3 mb-4">
-        <div className="w-2 h-2 bg-[#284139] rounded-full"></div>
-        <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#284139] leading-tight">
-          Intelligent Details
+        <h2 className="font-casta text-3xl sm:text-4xl md:text-5xl text-[#284139] leading-tight" style={{ fontWeight: '500', letterSpacing: '0.05em', textShadow: '0 0 10px rgba(0, 0, 0, 0.1)', lineHeight: '1.2' }}>
+        Intelligent Details
         </h2>
       </div>
       <p className="text-base sm:text-lg md:text-xl text-[#284139]/80 leading-relaxed">
@@ -117,9 +114,8 @@ export default function Product() {
     </div>,
     <div key="desc-4" className="space-y-4">
       <div className="flex items-center gap-3 mb-4">
-        <div className="w-2 h-2 bg-[#284139] rounded-full"></div>
-        <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#284139] leading-tight">
-          Your Digital Pantry
+        <h2 className="font-casta text-3xl sm:text-4xl md:text-5xl text-[#284139] leading-tight" style={{ fontWeight: '500', letterSpacing: '0.05em', textShadow: '0 0 10px rgba(0, 0, 0, 0.1)', lineHeight: '1.2' }}>
+        Your Digital Pantry
         </h2>
       </div>
       <p className="text-base sm:text-lg md:text-xl text-[#284139]/80 leading-relaxed">
@@ -143,13 +139,13 @@ export default function Product() {
   ];
 
   return (
-    <div className="relative flex flex-col justify-center min-h-screen w-full bg-gradient-to-br from-white/80 via-[#F8F6F2]/75 to-[#F0EDE8]/80 py-12 sm:py-16 lg:py-20 overflow-hidden" id="product">
+    <div className="relative flex flex-col justify-center min-h-screen w-full bg-gradient-to-br from-[#E8E4D9]/90 via-[#F5F3ED]/85 to-[#E8E4D9]/90 py-12 sm:py-16 lg:py-20 overflow-hidden" id="bot-and-recipes">
       {/* Background decorative elements */}
       <FadeInMotion>
         <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8 sm:mb-12 md:mb-16">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#284139] mb-4 sm:mb-6">
-              Smart Pantry Management
+          <h1 className="text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-casta text-[#284139] mb-3 xs:mb-4 sm:mb-6" style={{ fontWeight: '400', lineHeight: '1.2', textShadow: '0 0 10px rgba(0, 0, 0, 0.1)' }}>
+              Smart Organization
             </h1>
             <p className="text-lg sm:text-xl md:text-2xl text-[#284139]/70 max-w-2xl mx-auto">
               Keep track of your ingredients with intelligent organization and AI-powered insights

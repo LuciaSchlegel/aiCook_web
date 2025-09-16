@@ -8,8 +8,8 @@ export default function HomePage() {
     <div>
       <AnimatedWelcome/>
       <LandingPage />
-      <Product />
       <BotAndRecipes />
+      <Product />
     </div>
   );
 }

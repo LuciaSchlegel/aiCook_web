@@ -27,12 +27,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <title>{metadata.title}</title>
       </head>
       <body>
-        {/* Background grain image global */}
-        {/* <div
-          style={{ backgroundImage: "url('/images/back.svg')", pointerEvents: 'none', opacity: 0.2 }}
-          className="fixed inset-0 z-0 bg-center w-screen h-screen"
-          aria-hidden="true"
-          /> */}
         <CookingBackgroundAnimation />
         <div className="relative z-10">
           <Header />

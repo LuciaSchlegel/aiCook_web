@@ -25,12 +25,11 @@ export default function LandingPage() {
               </h1>
               
               <p 
-                className="font-light tracking-wider text-[#284139]"
+                className="text-xl sm:text-2xl md:text-3xl lg:text-3xl text-[#284139]"
                 style={{
-                  fontFamily: 'Casta',
-                  fontSize: 'clamp(0.9rem, 2.5vw, 1.2rem)',
-                  textShadow: '0 0 10px rgba(0, 0, 0, 0.1)',
                   letterSpacing: '0.05em',
+                  fontWeight: '200',
+                  fontFamily: 'Casta',
                 }}
               >
                 coming this fall

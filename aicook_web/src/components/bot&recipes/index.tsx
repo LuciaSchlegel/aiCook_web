@@ -46,9 +46,8 @@ export default function BotAndRecipes() {
   const descriptions = [
     <div key="desc-1" className="space-y-4">
       <div className="flex items-center gap-3 mb-4">
-        <div className="w-2 h-2 bg-[#284139] rounded-full"></div>
-        <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#284139] leading-tight">
-          Your Personal Cooking Assistant
+      <h2 className="font-casta text-3xl sm:text-4xl md:text-5xl text-[#284139] leading-tight" style={{ fontWeight: '500', letterSpacing: '0.05em', textShadow: '0 0 10px rgba(0, 0, 0, 0.1)', lineHeight: '1.2' }}>
+      Your Personal Cooking Assistant
         </h2>
       </div>
       <p className="text-base sm:text-lg md:text-xl text-[#284139]/80 leading-relaxed">
@@ -71,9 +70,8 @@ export default function BotAndRecipes() {
     </div>,
     <div key="desc-2" className="space-y-4">
       <div className="flex items-center gap-3 mb-4">
-        <div className="w-2 h-2 bg-[#284139] rounded-full"></div>
-        <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#284139] leading-tight">
-          Your Curated Cookbook
+      <h2 className="font-casta text-3xl sm:text-4xl md:text-5xl text-[#284139] leading-tight" style={{ fontWeight: '500', letterSpacing: '0.05em', textShadow: '0 0 10px rgba(0, 0, 0, 0.1)', lineHeight: '1.2' }}>
+      Your Curated Cookbook
         </h2>
       </div>
       <p className="text-base sm:text-lg md:text-xl text-[#284139]/80 leading-relaxed">
@@ -99,9 +97,8 @@ export default function BotAndRecipes() {
     </div>,
     <div key="desc-3" className="space-y-4">
       <div className="flex items-center gap-3 mb-4">
-        <div className="w-2 h-2 bg-[#284139] rounded-full"></div>
-        <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#284139] leading-tight">
-          Beautiful Recipe Cards
+      <h2 className="font-casta text-3xl sm:text-4xl md:text-5xl text-[#284139] leading-tight" style={{ fontWeight: '500', letterSpacing: '0.05em', textShadow: '0 0 10px rgba(0, 0, 0, 0.1)', lineHeight: '1.2' }}>
+      Beautiful Recipe Cards
         </h2>
       </div>
       <p className="text-base sm:text-lg md:text-xl text-[#284139]/80 leading-relaxed">
@@ -125,8 +122,7 @@ export default function BotAndRecipes() {
     </div>,
     <div key="desc-4" className="space-y-4">
       <div className="flex items-center gap-3 mb-4">
-        <div className="w-2 h-2 bg-[#284139] rounded-full"></div>
-        <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#284139] leading-tight">
+          <h2 className="font-casta text-3xl sm:text-4xl md:text-5xl text-[#284139] leading-tight" style={{ fontWeight: '500', letterSpacing: '0.05em', textShadow: '0 0 10px rgba(0, 0, 0, 0.1)', lineHeight: '1.2' }}>
           Smart Recommendations
         </h2>
       </div>
@@ -162,7 +158,7 @@ export default function BotAndRecipes() {
       <FadeInMotion>
               <div className="relative w-full max-w-7xl mx-auto px-3 xs:px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-8 xs:mb-10 sm:mb-12 md:mb-16">
-          <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#284139] mb-3 xs:mb-4 sm:mb-6">
+          <h1 className="text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-casta text-[#284139] mb-3 xs:mb-4 sm:mb-6" style={{ fontWeight: '400', lineHeight: '1.2', textShadow: '0 0 10px rgba(0, 0, 0, 0.1)' }}>
             Discover ai.Cook
           </h1>
           <p className="text-base xs:text-lg sm:text-xl md:text-2xl text-[#284139]/70 max-w-2xl mx-auto px-2 xs:px-0">

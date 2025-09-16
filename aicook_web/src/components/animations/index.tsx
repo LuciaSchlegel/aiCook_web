@@ -24,7 +24,7 @@ export function AnimatedWelcome() {
   }, []);
 
   return (
-    <div className="relative flex flex-col font-casta items-center justify-center min-h-screen w-full overflow-hidden px-4">
+    <div className="relative flex flex-col items-center justify-center min-h-screen w-full overflow-hidden px-4">
       {/* Logo */}
       <motion.div
         variants={logoVariants}
@@ -51,10 +51,16 @@ export function AnimatedWelcome() {
             animate="visible"
             className="flex flex-col items-center max-w-4xl mx-auto"
           >
-            <h1 className="text-6xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-light tracking-wider text-center leading-tight">
+            <h1
+              className="font-casta text-6xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-light tracking-wider text-center leading-tight"
+              style={{
+                textShadow:
+                  '0 0 10px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(255,255,255,0.3)'
+              }}
+            >
               ai.Cook
             </h1>
-            <p className="text-base sm:text-lg md:text-xl lg:text-2xl mt-2 sm:mt-4 text-center max-w-2xl px-4">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl mt-2 sm:mt-4 text-center max-w-2xl px-4 font-light" style={{ letterSpacing: '0.05em' }}>
               Your personal AI-powered cooking assistant.
             </p>
           </motion.div>
