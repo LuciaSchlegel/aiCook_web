@@ -14,7 +14,7 @@ export default function Footer() {
             height={40}
             className="h-8 xs:h-9 sm:h-10 lg:h-12 w-auto"
           />
-          <span className="tracking-widest font-medium text-lg xs:text-xl sm:text-2xl lg:text-3xl">
+          <span className="tracking-widest font-melodrama-regular text-lg xs:text-xl sm:text-2xl lg:text-3xl">
             ai.Cook
           </span>
         </div>
@@ -23,14 +23,14 @@ export default function Footer() {
         <div className="flex flex-col xs:flex-row items-center gap-4 sm:gap-6 lg:gap-8 text-center">
           <Link
             href="mailto:jointhewaitlist@aicook.com"
-            className="hover:text-[#e8e4d9]/80 hover:underline underline-offset-4 transition-all duration-300 ease-out text-sm xs:text-base sm:text-lg lg:text-xl font-light tracking-wide"
+            className="hover:text-[#e8e4d9]/80 hover:underline underline-offset-4 transition-all duration-300 ease-out text-sm xs:text-base sm:text-lg lg:text-xl font-melodrama-regular tracking-wide"
           >
             Contact Us
           </Link>
         </div>
         
         {/* Copyright */}
-        <div className="text-xs xs:text-sm sm:text-base lg:text-lg text-[#e8e4d9]/60 text-center sm:text-right font-light tracking-wide">
+        <div className="text-xs xs:text-sm sm:text-base lg:text-lg text-[#e8e4d9]/60 text-center sm:text-right font-melodrama-light tracking-wide">
           &copy; {new Date().getFullYear()} ai.Cook. All rights reserved.
         </div>
       </div>
