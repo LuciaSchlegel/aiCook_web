@@ -8,27 +8,26 @@ export default function LandingPage() {
   return (
     <div className="min-h-screen w-full bg-gradient-to-br from-[#E8E4D9]/90 via-[#F1EDE7]/85 to-[#E8E4D9]/90 overflow-hidden">
       <FadeInMotion>
-        <div className="flex flex-col md:flex-row min-h-screen w-full">
+        <div className="flex flex-col lg:flex-row min-h-screen w-full">
           {/* Left Column: Text */}
-          <div className="flex flex-col justify-center items-center w-full md:w-1/2 min-h-[60vh] md:min-h-full px-4 sm:px-6 md:px-8 lg:px-12 py-8 md:py-0 relative">
-            <div className="text-center relative z-20 max-w-2xl mx-auto">
-              <h1 
-                className="font-light tracking-wide text-[#284139] leading-tight mb-4 sm:mb-6 md:mb-8"
+          <div className="flex flex-col justify-center items-center w-full lg:w-1/2 min-h-[50vh] lg:min-h-full px-4 xs:px-6 sm:px-8 md:px-12 lg:px-16 py-12 sm:py-16 lg:py-0 relative">
+            <div className="text-center relative z-20 max-w-2xl mx-auto space-y-4 sm:space-y-6 lg:space-y-8">
+              <h1
+                className="font-light tracking-wide text-[#284139] leading-tight"
                 style={{
                   fontFamily: 'Casta',
-                  fontSize: 'clamp(1.8rem, 6vw, 4rem)',
+                  fontSize: 'clamp(1.5rem, 4.5vw + 1rem, 3.5rem)',
                   textShadow: '0 0 10px rgba(0, 0, 0, 0.1)',
                   letterSpacing: '0.02em',
+                  lineHeight: '1.15'
                 }}
               >
                 get to know ai, one recipe at a time
               </h1>
-              
-              <p 
-                className="text-xl sm:text-2xl md:text-3xl lg:text-3xl text-[#284139]"
+              <p
+                className="text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl text-[#284139] font-light"
                 style={{
                   letterSpacing: '0.05em',
-                  fontWeight: '200',
                   fontFamily: 'Casta',
                 }}
               >
@@ -37,11 +36,11 @@ export default function LandingPage() {
             </div>
             <GraphicAssets />
           </div>
-
+          
           {/* Right Column: Mockups */}
-          <div className="flex items-end justify-center w-full md:w-1/2 min-h-[40vh] md:min-h-full px-4 sm:px-6 md:px-8 pr-8 sm:pr-12 md:pr-16 lg:pr-20 py-6 md:mt-20 mb-8 sm:mb-12 md:mb-16 lg:mb-20">
-            <div className="flex flex-row items-end gap-2 sm:gap-3 md:gap-4">
-              <motion.div 
+          <div className="flex items-end justify-center w-full lg:w-1/2 min-h-[50vh] lg:min-h-full px-4 xs:px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20 py-8 sm:py-12 lg:py-16 xl:py-20">
+            <div className="flex flex-row items-end gap-2 xs:gap-3 sm:gap-4 lg:gap-6">
+              <motion.div
                 className="relative"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -50,15 +49,15 @@ export default function LandingPage() {
                 <Image
                   src="/mockups/first_screen_iPhone.png"
                   alt="First Screen iPhone"
-                  className="w-full h-auto drop-shadow-2xl max-w-[200px] sm:max-w-[220px] md:max-w-[260px] lg:max-w-[300px] xl:max-w-[340px]"
+                  className="w-full h-auto drop-shadow-2xl max-w-[160px] xs:max-w-[180px] sm:max-w-[200px] md:max-w-[240px] lg:max-w-[280px] xl:max-w-[320px]"
                   width={360}
                   height={640}
                   style={{ width: 'auto', height: 'auto' }}
                   priority
                 />
               </motion.div>
-              <motion.div 
-                className="relative hidden lg:block"
+              <motion.div
+                className="relative hidden md:block"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1.2, delay: 0.8, ease: [0.25, 0.46, 0.45, 0.94] as const }}
@@ -66,7 +65,7 @@ export default function LandingPage() {
                 <Image
                   src="/mockups/first_screen_iPad.png"
                   alt="First Screen iPad"
-                  className="w-full h-auto drop-shadow-2xl max-w-[280px] lg:max-w-[320px] xl:max-w-[560px]"
+                  className="w-full h-auto drop-shadow-2xl max-w-[240px] lg:max-w-[280px] xl:max-w-[480px]"
                   width={1024}
                   height={1366}
                   style={{ width: 'auto', height: 'auto' }}
