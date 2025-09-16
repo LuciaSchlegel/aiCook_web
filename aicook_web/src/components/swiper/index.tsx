@@ -113,8 +113,16 @@ export default function Swiper({ slides, descriptions }: SwiperProps) {
                 {/* Image Container */}
                 <motion.div
                   whileHover={{ scale: 1.01 }}
-                  transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
-                  className="relative transform-gpu mb-12"
+                  transition={{ 
+                    duration: 0.3, 
+                    ease: "easeOut",
+                    type: "tween"
+                  }}
+                  className="relative transform-gpu will-change-transform mb-12"
+                  style={{ 
+                    backfaceVisibility: 'hidden',
+                    perspective: '1000px'
+                  }}
                 >
                   {slides[currentIndex]}
                 </motion.div>
