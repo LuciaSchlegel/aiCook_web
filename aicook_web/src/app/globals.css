@@ -6,16 +6,71 @@ body {
   color: #e8e4d9;
   font-family: apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   scroll-behavior: smooth;
-  font-weight: 400;
 }
 
 @font-face {
-    font-family: 'Casta';
-    src: url('/fonts/Casta-Thin.otf') format('opentype');
+    font-family: 'Melodrama Regular';
+    src: url('/fonts/Melodrama-Regular.otf') format('opentype');
 }
 
-.font-casta {
-  font-family: 'Casta', sans-serif;
+@font-face {
+    font-family: 'Melodrama Bold';
+    src: url('/fonts/Melodrama-Bold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Melodrama Light';
+    src: url('/fonts/Melodrama-Light.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Melodrama Medium';
+    src: url('/fonts/Melodrama-Medium.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Melodrama SemiBold';
+    src: url('/fonts/Melodrama-SemiBold.otf') format('opentype');
+}
+
+.font-melodrama-regular {
+  font-family: 'Melodrama Regular', sans-serif;
+  letter-spacing: 0.1em;
+  line-height: 1.5;
+  text-rendering: optimizeLegibility;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+.font-melodrama-bold {
+  font-family: 'Melodrama Bold', sans-serif;
+  letter-spacing: 0.1em;
+  line-height: 1.5;
+  text-rendering: optimizeLegibility;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+.font-melodrama-light {
+  font-family: 'Melodrama Light', sans-serif;
+  letter-spacing: 0.1em;
+  line-height: 1.5;
+  text-rendering: optimizeLegibility;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+.font-melodrama-medium {
+  font-family: 'Melodrama Medium', sans-serif;
+  letter-spacing: 0.1em;
+  line-height: 1.5;
+  text-rendering: optimizeLegibility;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+.font-melodrama-semibold {
+  font-family: 'Melodrama SemiBold', sans-serif;
   letter-spacing: 0.1em;
   line-height: 1.5;
   text-rendering: optimizeLegibility;

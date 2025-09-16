@@ -13,22 +13,20 @@ export default function LandingPage() {
           <div className="flex flex-col justify-center items-center w-full lg:w-1/2 min-h-[50vh] lg:min-h-full px-4 xs:px-6 sm:px-8 md:px-12 lg:px-16 py-12 sm:py-16 lg:py-0 relative">
             <div className="text-center relative z-20 max-w-2xl mx-auto space-y-4 sm:space-y-6 lg:space-y-8">
               <h1
-                className="font-light tracking-wide text-[#284139] leading-tight"
+                className="font-melodrama-regular tracking-wide text-[#284139] leading-tight"
                 style={{
-                  fontFamily: 'Casta',
-                  fontSize: 'clamp(1.5rem, 4.5vw + 1rem, 3.5rem)',
+                  fontSize: 'clamp(1.5rem, 4.5vw + 1rem, 4rem)',
                   textShadow: '0 0 10px rgba(0, 0, 0, 0.1)',
-                  letterSpacing: '0.02em',
+                  letterSpacing: '0.08em',
                   lineHeight: '1.15'
                 }}
               >
                 get to know ai, one recipe at a time
               </h1>
               <p
-                className="text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl text-[#284139] font-light"
+                className="text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl text-[#284139] font-melodrama-light"
                 style={{
                   letterSpacing: '0.05em',
-                  fontFamily: 'Casta',
                 }}
               >
                 coming this fall

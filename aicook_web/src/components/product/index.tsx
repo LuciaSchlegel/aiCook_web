@@ -45,8 +45,8 @@ export default function Product() {
 
   const descriptions = [
     <div key="desc-1" className="space-y-3 sm:space-y-4 lg:space-y-6">
-      <h2 className="font-casta text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#284139] leading-tight" 
-          style={{ fontWeight: '500', letterSpacing: '0.02em', textShadow: '0 0 10px rgba(0, 0, 0, 0.1)' }}>
+      <h2 className="font-melodrama-regular text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#284139] leading-tight" 
+          style={{ letterSpacing: '0.03em', textShadow: '0 0 10px rgba(0, 0, 0, 0.1)' }}>
         Smart Ingredient Management
       </h2>
       <p className="text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl text-[#284139]/80 leading-relaxed font-light">
@@ -65,8 +65,8 @@ export default function Product() {
       </div>
     </div>,
     <div key="desc-2" className="space-y-3 sm:space-y-4 lg:space-y-6">
-      <h2 className="font-casta text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#284139] leading-tight" 
-          style={{ fontWeight: '500', letterSpacing: '0.02em', textShadow: '0 0 10px rgba(0, 0, 0, 0.1)' }}>
+        <h2 className="font-melodrama-regular text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#284139] leading-tight" 
+            style={{ letterSpacing: '0.03em', textShadow: '0 0 10px rgba(0, 0, 0, 0.1)' }}>
         Personalized Ingredients
       </h2>
       <p className="text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl text-[#284139]/80 leading-relaxed font-light">
@@ -85,8 +85,8 @@ export default function Product() {
       </div>
     </div>,
     <div key="desc-3" className="space-y-3 sm:space-y-4 lg:space-y-6">
-      <h2 className="font-casta text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#284139] leading-tight" 
-          style={{ fontWeight: '500', letterSpacing: '0.02em', textShadow: '0 0 10px rgba(0, 0, 0, 0.1)' }}>
+      <h2 className="font-melodrama-regular text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#284139] leading-tight" 
+          style={{ letterSpacing: '0.03em', textShadow: '0 0 10px rgba(0, 0, 0, 0.1)' }}>
         Intelligent Details
       </h2>
       <div className="space-y-3 sm:space-y-4">
@@ -110,8 +110,8 @@ export default function Product() {
       </div>
     </div>,
     <div key="desc-4" className="space-y-3 sm:space-y-4 lg:space-y-6">
-      <h2 className="font-casta text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#284139] leading-tight" 
-          style={{ fontWeight: '500', letterSpacing: '0.02em', textShadow: '0 0 10px rgba(0, 0, 0, 0.1)' }}>
+      <h2 className="font-melodrama-regular text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#284139] leading-tight" 
+          style={{ letterSpacing: '0.03em', textShadow: '0 0 10px rgba(0, 0, 0, 0.1)' }}>
         Your Digital Pantry
       </h2>
       <div className="space-y-3 sm:space-y-4">
@@ -141,11 +141,11 @@ export default function Product() {
       <FadeInMotion>
         <div className="relative w-full max-w-7xl mx-auto px-4 xs:px-6 sm:px-8 lg:px-12">
           <div className="text-center mb-12 sm:mb-16 lg:mb-20">
-            <h1 className="text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-casta text-[#284139] mb-4 sm:mb-6 lg:mb-8" 
-                style={{ fontWeight: '400', lineHeight: '1.1', textShadow: '0 0 10px rgba(0, 0, 0, 0.1)' }}>
+            <h1 className="text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-melodrama-medium text-[#284139] mb-4 sm:mb-6 lg:mb-8" 
+                style={{ lineHeight: '1.1', textShadow: '0 0 10px rgba(0, 0, 0, 0.1)'}}>
               Smart Organization
             </h1>
-            <p className="text-base xs:text-lg sm:text-xl md:text-2xl lg:text-3xl text-[#284139]/70 max-w-3xl mx-auto font-light leading-relaxed">
+            <p className="text-base xs:text-lg sm:text-xl md:text-2xl lg:text-3xl text-[#284139]/70 max-w-3xl mx-auto font-melodrama-regular leading-relaxed">
               Keep track of your ingredients with intelligent organization and AI-powered insights
             </p>
           </div>
