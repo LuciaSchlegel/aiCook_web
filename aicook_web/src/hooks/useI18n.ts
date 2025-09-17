@@ -13,7 +13,7 @@ const STORAGE_KEY = 'preferred-language'
 
 // Available languages with metadata
 const AVAILABLE_LANGUAGES: Locale[] = [
-  { code: SupportedLocales.EN, name: 'English', nativeName: 'English', flag: '🇺🇸' },
+  { code: SupportedLocales.EN, name: 'English', nativeName: 'English', flag: '🇬🇧' },
   { code: SupportedLocales.ES, name: 'Spanish', nativeName: 'Español', flag: '🇪🇸' },
   { code: SupportedLocales.DE, name: 'German', nativeName: 'Deutsch', flag: '🇩🇪' },
 ]
