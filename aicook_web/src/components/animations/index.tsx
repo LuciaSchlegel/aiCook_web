@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useState, useEffect } from "react";
+import { useI18nContext } from "@/context/I18nContext";
 
 const logoVariants = {
   initial: { opacity: 0, scale: 0.9 },
@@ -15,6 +16,7 @@ const textVariants = {
 
 export function AnimatedWelcome() {
   const [showText, setShowText] = useState(false);
+  const { t, isReady } = useI18nContext();
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -44,7 +46,7 @@ export function AnimatedWelcome() {
       
       {/* Text Container */}
       <div className="flex items-center justify-center w-full mt-4 sm:mt-6 z-10 min-h-[80px] xs:min-h-[100px] sm:min-h-[120px] lg:min-h-[140px]">
-        {showText && (
+        {showText && isReady && (
           <motion.div
             variants={textVariants}
             initial="hidden"
@@ -57,13 +59,19 @@ export function AnimatedWelcome() {
                 textShadow: '0 0 10px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(255,255,255,0.3)'
               }}
             >
-              ai.Cook
+              {t('animations.title', 'ai.Cook')}
             </h1>
             <p className="font-melodrama-light text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl mt-3 sm:mt-4 lg:mt-6 text-center max-w-3xl px-4 leading-relaxed" 
                style={{ letterSpacing: '0.05em' }}>
-              Your personal AI-powered cooking assistant.
+              {t('animations.subtitle', 'Your personal AI-powered cooking assistant.')}
             </p>
           </motion.div>
+        )}
+        {!isReady && (
+          <div className="flex flex-col items-center">
+            <div className="animate-pulse bg-gray-200 h-20 w-96 rounded mb-4"></div>
+            <div className="animate-pulse bg-gray-200 h-6 w-80 rounded"></div>
+          </div>
         )}
       </div>
     </div>

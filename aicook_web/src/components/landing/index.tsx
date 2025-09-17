@@ -1,10 +1,14 @@
+// components/LandingPage.tsx
 "use client"
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { FadeInMotion } from "../animations/motion";
 import GraphicAssets from "../graphic assets";
+import { useI18nContext } from "@/context/I18nContext";
 
 export default function LandingPage() {
+  const { t, isReady } = useI18nContext();
+
   return (
     <div className="min-h-screen w-full bg-gradient-to-br from-[#E8E4D9]/90 via-[#F1EDE7]/85 to-[#E8E4D9]/90 overflow-hidden">
       <FadeInMotion>
@@ -12,25 +16,34 @@ export default function LandingPage() {
           {/* Left Column: Text */}
           <div className="flex flex-col justify-center items-center w-full lg:w-1/2 min-h-[50vh] lg:min-h-full px-4 xs:px-6 sm:px-8 md:px-12 lg:px-16 py-12 sm:py-16 lg:py-0 relative">
             <div className="text-center relative z-20 max-w-2xl mx-auto space-y-4 sm:space-y-6 lg:space-y-8">
-              <h1
-                className="font-melodrama-regular tracking-wide text-[#284139] leading-tight"
-                style={{
-                  fontSize: 'clamp(1.5rem, 4.5vw + 1rem, 4rem)',
-                  textShadow: '0 0 10px rgba(0, 0, 0, 0.1)',
-                  letterSpacing: '0.08em',
-                  lineHeight: '1.15'
-                }}
-              >
-                get to know ai, one recipe at a time
-              </h1>
-              <p
-                className="text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl text-[#284139] font-melodrama-light"
-                style={{
-                  letterSpacing: '0.05em',
-                }}
-              >
-                coming this fall
-              </p>
+              {isReady ? (
+                <>
+                  <h1
+                    className="font-melodrama-regular tracking-wide text-[#284139] leading-tight"
+                    style={{
+                      fontSize: 'clamp(1.5rem, 4.5vw + 1rem, 4rem)',
+                      textShadow: '0 0 10px rgba(0, 0, 0, 0.1)',
+                      letterSpacing: '0.08em',
+                      lineHeight: '1.15'
+                    }}
+                  >
+                    {t('landing.title', 'get to know ai, one recipe at a time')}
+                  </h1>
+                  <p
+                    className="text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl text-[#284139] font-melodrama-light"
+                    style={{
+                      letterSpacing: '0.05em',
+                    }}
+                  >
+                    {t('landing.subtitle', 'coming this fall')}
+                  </p>
+                </>
+              ) : (
+                <div className="space-y-4">
+                  <div className="animate-pulse bg-gray-200 h-16 w-full rounded"></div>
+                  <div className="animate-pulse bg-gray-200 h-8 w-3/4 mx-auto rounded"></div>
+                </div>
+              )}
             </div>
             <GraphicAssets />
           </div>

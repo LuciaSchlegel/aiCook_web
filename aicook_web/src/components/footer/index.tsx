@@ -1,7 +1,12 @@
+"use client";
+// components/Footer.tsx
 import Link from "next/link";
 import Image from "next/image";
+import { useI18nContext } from "@/context/I18nContext";
 
 export default function Footer() {
+  const { t, isReady } = useI18nContext();
+
   return (
     <footer className="w-full bg-[#284139] text-[#e8e4d9] border-t border-[#e8e4d9]/10 relative z-10">
       <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between px-4 xs:px-6 sm:px-8 lg:px-12 py-8 sm:py-10 lg:py-12 gap-6 sm:gap-8 font-[Casta]">
@@ -15,7 +20,7 @@ export default function Footer() {
             className="h-8 xs:h-9 sm:h-10 lg:h-12 w-auto"
           />
           <span className="tracking-widest font-melodrama-regular text-lg xs:text-xl sm:text-2xl lg:text-3xl">
-            ai.Cook
+            {isReady ? t('footer.aiCook', 'ai.Cook') : 'ai.Cook'}
           </span>
         </div>
         
@@ -25,13 +30,13 @@ export default function Footer() {
             href="mailto:jointhewaitlist@aicook.com"
             className="hover:text-[#e8e4d9]/80 hover:underline underline-offset-4 transition-all duration-300 ease-out text-sm xs:text-base sm:text-lg lg:text-xl font-melodrama-regular tracking-wide"
           >
-            Contact Us
+            {isReady ? t('footer.contactUs', 'Contact Us') : 'Contact Us'}
           </Link>
         </div>
         
         {/* Copyright */}
         <div className="text-xs xs:text-sm sm:text-base lg:text-lg text-[#e8e4d9]/60 text-center sm:text-right font-melodrama-light tracking-wide">
-          &copy; {new Date().getFullYear()} ai.Cook. All rights reserved.
+          {isReady ? t('footer.copyright', `© ${new Date().getFullYear()} ai.Cook. All rights reserved.`) : `© ${new Date().getFullYear()} ai.Cook. All rights reserved.`}
         </div>
       </div>
     </footer>

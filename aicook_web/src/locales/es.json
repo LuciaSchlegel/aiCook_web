@@ -1,0 +1,94 @@
+{
+    "common": {
+      "loading": "Preparando...",
+      "error": "Algo no salió como esperábamos"
+    },
+  
+    "navigation": {
+      "sneakPeek": "avance exclusivo",
+      "joinWaitlist": "únete a la lista de espera",
+      "about": "sobre ai.Cook"
+    },
+  
+    "animations": {
+      "title": "ai.Cook",
+      "subtitle": "Tu asistente culinario con inteligencia artificial."
+    },
+  
+    "landing": {
+      "title": "descubre la cocina con IA, receta tras receta",
+      "subtitle": "disponible este otoño"
+    },
+  
+    "botAndRecipes": {
+      "title": "Descubre ai.Cook",
+      "subtitle": "Explora el futuro gastronómico con tu asistente culinario inteligente",
+      "headers": {
+        "1": "Tu Chef Digital",
+        "2": "Tu Recetario Personalizado",
+        "3": "Recetas Visualmente Inspiradoras",
+        "4": "Recomendaciones Inteligentes"
+      },
+      "descriptions": {
+        "1": "Solo elige lo que quieres saborear – ai.Cook se encarga del resto.",
+        "2": "Tus ingredientes se reconocen automáticamente. Indícanos tus preferencias, tu tiempo disponible y el nivel de complejidad deseado.",
+        "3": "Explora recetas seleccionadas con cuidado y encuentra inspiración para tu día a día.",
+        "4": "La colección de ai.Cook crece constantemente con nuevas creaciones, siempre listas para sorprenderte.",
+        "5": "Nuestros algoritmos culinarios te recomiendan los platos ideales según tus ingredientes, hábitos y estilo de vida.",
+        "6": "Diseñamos cada receta para que luzca tan deliciosa como sabe: claras, visuales y fáciles de seguir.",
+        "7": "¿Una medida extraña o un ingrediente nuevo? Pregunta a nuestro chatbot y recibe ayuda instantánea.",
+        "8": "En segundos, descubre tu top 3 de recetas adaptadas a tu despensa, tu dieta y tus gustos.",
+        "9": "¿Quieres ir más allá? Pide variaciones, sustituciones o tips culinarios inteligentes."
+      },
+      "tags": {
+        "1": "Detección Inteligente",
+        "2": "Preferencias Personales",
+        "3": "Gestión de Tiempo",
+        "4": "Algoritmos Gastronómicos",
+        "5": "Contenido Fresco",
+        "6": "Personalización Total",
+        "7": "Diseño Visual",
+        "8": "Fácil de Seguir",
+        "9": "Asistencia Integrada",
+        "10": "Resultados Instantáneos",
+        "11": "Compatible con Dietas",
+        "12": "Tips Inteligentes"
+      }
+    },
+  
+    "product": {
+      "title": "Organización Inteligente",
+      "subtitle": "Gestiona tu despensa con orden inteligente y el poder de la IA",
+      "headers": {
+        "1": "Gestión de Ingredientes",
+        "2": "Lista Personalizada",
+        "3": "Detalles Inteligentes",
+        "4": "Tu Despensa Digital"
+      },
+      "descriptions": {
+        "1": "Añade tus ingredientes en segundos: selecciona de nuestra base enriquecida o crea los tuyos.",
+        "2": "Construye tu lista personal con básicos de cocina o con tus favoritos únicos.",
+        "3": "Ingresa la cantidad y deja que ai.Cook haga el resto.",
+        "4": "Nutrición, frescura y disponibilidad gestionadas automáticamente por IA.",
+        "5": "Visualiza y administra todos tus ingredientes sin esfuerzo.",
+        "6": "Organiza por categorías, dietas, intolerancias y más."
+      },
+      "tags": {
+        "1": "Añadido Rápido",
+        "2": "Base de Ingredientes Rica",
+        "3": "Ingredientes Personalizados",
+        "4": "Nutrición Automática",
+        "5": "Seguimiento Inteligente",
+        "6": "Impulsado por IA",
+        "7": "Gestión Sencilla",
+        "8": "Categorías Inteligentes",
+        "9": "Soporte Nutricional"
+      }
+    },
+  
+    "footer": {
+      "aiCook": "ai.Cook",
+      "contactUs": "Contáctanos",
+      "copyright": "© 2025 ai.Cook. Todos los derechos reservados."
+    }
+  }

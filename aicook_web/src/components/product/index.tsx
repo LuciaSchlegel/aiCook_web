@@ -2,8 +2,10 @@
 import Image from "next/image";
 import { FadeInMotion } from "../animations/motion";
 import Swiper from "../swiper";
+import { useI18nContext } from "@/context/I18nContext";
 
 export default function Product() {
+  const { t, isReady } = useI18nContext();
   const slides = [
     <Image
       key="adding"
@@ -47,90 +49,90 @@ export default function Product() {
     <div key="desc-1" className="space-y-3 sm:space-y-4 lg:space-y-6">
       <h2 className="font-melodrama-regular text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#284139] leading-tight" 
           style={{ letterSpacing: '0.03em', textShadow: '0 0 10px rgba(0, 0, 0, 0.1)' }}>
-        Smart Ingredient Management
+        {isReady ? t('product.headers.1', 'Smart Ingredient Management') : 'Smart Ingredient Management'}
       </h2>
       <p className="text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl text-[#284139]/80 leading-relaxed font-light">
-        Add your available ingredients to your pantry quickly and easily. You can either pick from a rich ingredient list or add your own.
+        {isReady ? t('product.descriptions.1', 'Add your available ingredients to your pantry quickly and easily. You can either pick from a rich ingredient list or add your own.') : 'Add your available ingredients to your pantry quickly and easily. You can either pick from a rich ingredient list or add your own.'}
       </p>
       <div className="flex flex-wrap gap-1.5 sm:gap-2 mt-4 sm:mt-6">
         <span className="px-2 xs:px-3 py-1 xs:py-1.5 bg-[#284139]/10 text-[#284139] text-xs sm:text-sm rounded-full border border-[#284139]/20">
-          Quick Add
+          {isReady ? t('product.tags.1', 'Quick Add') : 'Quick Add'}
         </span>
         <span className="px-2 xs:px-3 py-1 xs:py-1.5 bg-[#284139]/10 text-[#284139] text-xs sm:text-sm rounded-full border border-[#284139]/20">
-          Rich Database
+          {isReady ? t('product.tags.2', 'Rich Database') : 'Rich Database'}
         </span>
         <span className="px-2 xs:px-3 py-1 xs:py-1.5 bg-[#284139]/10 text-[#284139] text-xs sm:text-sm rounded-full border border-[#284139]/20">
-          Custom Ingredients
+          {isReady ? t('product.tags.3', 'Custom Ingredients') : 'Custom Ingredients'}
         </span>
       </div>
     </div>,
     <div key="desc-2" className="space-y-3 sm:space-y-4 lg:space-y-6">
         <h2 className="font-melodrama-regular text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#284139] leading-tight" 
             style={{ letterSpacing: '0.03em', textShadow: '0 0 10px rgba(0, 0, 0, 0.1)' }}>
-        Personalized Ingredients
+        {isReady ? t('product.headers.2', 'Personalized Ingredients') : 'Personalized Ingredients'}
       </h2>
       <p className="text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl text-[#284139]/80 leading-relaxed font-light">
-        You can add your own ingredients to your pantry, or you can choose from a rich ingredient list.
+        {isReady ? t('product.descriptions.2', 'You can add your own ingredients to your pantry, or you can choose from a rich ingredient list.') : 'You can add your own ingredients to your pantry, or you can choose from a rich ingredient list.'}
       </p>
       <div className="flex flex-wrap gap-1.5 sm:gap-2 mt-4 sm:mt-6">
         <span className="px-2 xs:px-3 py-1 xs:py-1.5 bg-[#284139]/10 text-[#284139] text-xs sm:text-sm rounded-full border border-[#284139]/20">
-          Custom Ingredients
+          {isReady ? t('product.tags.3', 'Custom Ingredients') : 'Custom Ingredients'}
         </span>
         <span className="px-2 xs:px-3 py-1 xs:py-1.5 bg-[#284139]/10 text-[#284139] text-xs sm:text-sm rounded-full border border-[#284139]/20">
-          Personalized
+          {isReady ? t('product.tags.4', 'Personalized') : 'Personalized'}
         </span>
         <span className="px-2 xs:px-3 py-1 xs:py-1.5 bg-[#284139]/10 text-[#284139] text-xs sm:text-sm rounded-full border border-[#284139]/20">
-          Rich Database
+          {isReady ? t('product.tags.2', 'Rich Database') : 'Rich Database'}
         </span>
       </div>
     </div>,
     <div key="desc-3" className="space-y-3 sm:space-y-4 lg:space-y-6">
       <h2 className="font-melodrama-regular text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#284139] leading-tight" 
           style={{ letterSpacing: '0.03em', textShadow: '0 0 10px rgba(0, 0, 0, 0.1)' }}>
-        Intelligent Details
+        {isReady ? t('product.headers.3', 'Intelligent Details') : 'Intelligent Details'}
       </h2>
       <div className="space-y-3 sm:space-y-4">
         <p className="text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl text-[#284139]/80 leading-relaxed font-light">
-          You only have to enter your ingredient&apos;s quantity, the app will do the rest.
+          {isReady ? t('product.descriptions.3', 'You only have to enter your ingredient&apos;s quantity, the app will do the rest.') : 'You only have to enter your ingredient&apos;s quantity, the app will do the rest.'}
         </p>
         <p className="text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl text-[#284139]/70 leading-relaxed font-light">
-          Nutritional information, availability tracking, and more will be performed automatically by the integrated AI.
+          {isReady ? t('product.descriptions.4', 'Nutritional information, availability tracking, and more will be performed automatically by the integrated AI.') : 'Nutritional information, availability tracking, and more will be performed automatically by the integrated AI.'}
         </p>
       </div>
       <div className="flex flex-wrap gap-1.5 sm:gap-2 mt-4 sm:mt-6">
         <span className="px-2 xs:px-3 py-1 xs:py-1.5 bg-[#284139]/10 text-[#284139] text-xs sm:text-sm rounded-full border border-[#284139]/20">
-          Auto Nutrition
+          {isReady ? t('product.tags.5', 'Auto Nutrition') : 'Auto Nutrition'}
         </span>
         <span className="px-2 xs:px-3 py-1 xs:py-1.5 bg-[#284139]/10 text-[#284139] text-xs sm:text-sm rounded-full border border-[#284139]/20">
-          Smart Tracking
+          {isReady ? t('product.tags.6', 'Smart Tracking') : 'Smart Tracking'}
         </span>
         <span className="px-2 xs:px-3 py-1 xs:py-1.5 bg-[#284139]/10 text-[#284139] text-xs sm:text-sm rounded-full border border-[#284139]/20">
-          AI Powered
+          {isReady ? t('product.tags.7', 'AI Powered') : 'AI Powered'}
         </span>
       </div>
     </div>,
     <div key="desc-4" className="space-y-3 sm:space-y-4 lg:space-y-6">
       <h2 className="font-melodrama-regular text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#284139] leading-tight" 
           style={{ letterSpacing: '0.03em', textShadow: '0 0 10px rgba(0, 0, 0, 0.1)' }}>
-        Your Digital Pantry
+        {isReady ? t('product.headers.4', 'Your Digital Pantry') : 'Your Digital Pantry'}
       </h2>
       <div className="space-y-3 sm:space-y-4">
         <p className="text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl text-[#284139]/80 leading-relaxed font-light">
-          View all ingredients available in your pantry and manage your inventory easily.
+          {isReady ? t('product.descriptions.5', 'View all ingredients available in your pantry and manage your inventory easily.') : 'View all ingredients available in your pantry and manage your inventory easily.'}
         </p>
         <p className="text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl text-[#284139]/70 leading-relaxed font-light">
-          You can classify them by categories, diets, intolerances, and more.
+          {isReady ? t('product.descriptions.6', 'You can classify them by categories, diets, intolerances, and more.') : 'You can classify them by categories, diets, intolerances, and more.'}
         </p>
       </div>
       <div className="flex flex-wrap gap-1.5 sm:gap-2 mt-4 sm:mt-6">
         <span className="px-2 xs:px-3 py-1 xs:py-1.5 bg-[#284139]/10 text-[#284139] text-xs sm:text-sm rounded-full border border-[#284139]/20">
-          Easy Management
+          {isReady ? t('product.tags.8', 'Easy Management') : 'Easy Management'}
         </span>
         <span className="px-2 xs:px-3 py-1 xs:py-1.5 bg-[#284139]/10 text-[#284139] text-xs sm:text-sm rounded-full border border-[#284139]/20">
-          Smart Categories
+          {isReady ? t('product.tags.9', 'Smart Categories') : 'Smart Categories'}
         </span>
         <span className="px-2 xs:px-3 py-1 xs:py-1.5 bg-[#284139]/10 text-[#284139] text-xs sm:text-sm rounded-full border border-[#284139]/20">
-          Diet Support
+          {isReady ? t('product.tags.10', 'Diet Support') : 'Diet Support'} 
         </span>
       </div>
     </div>
@@ -143,10 +145,10 @@ export default function Product() {
           <div className="text-center mb-12 sm:mb-16 lg:mb-20">
             <h1 className="text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-melodrama-medium text-[#284139] mb-4 sm:mb-6 lg:mb-8" 
                 style={{ lineHeight: '1.1', textShadow: '0 0 10px rgba(0, 0, 0, 0.1)'}}>
-              Smart Organization
+              {isReady ? t('product.title', 'Smart Organization') : 'Smart Organization'}
             </h1>
             <p className="text-base xs:text-lg sm:text-xl md:text-2xl lg:text-3xl text-[#284139]/70 max-w-3xl mx-auto font-melodrama-regular leading-relaxed">
-              Keep track of your ingredients with intelligent organization and AI-powered insights
+              {isReady ? t('product.subtitle', 'Keep track of your ingredients with intelligent organization and AI-powered insights') : 'Keep track of your ingredients with intelligent organization and AI-powered insights'}
             </p>
           </div>
           <Swiper slides={slides} descriptions={descriptions} />

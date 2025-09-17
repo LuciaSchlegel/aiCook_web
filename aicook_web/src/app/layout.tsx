@@ -4,6 +4,7 @@ import './globals.css';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
 import CookingBackgroundAnimation from '@/components/animations/CookingBackgroundAnimation';
+import IProvider from '@/context/I18nContext';
 
 export const metadata = {
   title: 'ai.Cook',
@@ -29,9 +30,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <CookingBackgroundAnimation />
         <div className="relative z-10">
+          <IProvider>
           <Header />
           {children}
           <Footer />
+          </IProvider>
         </div>
       </body>
     </html>

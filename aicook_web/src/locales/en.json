@@ -1,0 +1,94 @@
+{
+    "common": {
+      "loading": "Preparing...",
+      "error": "Something didn’t go as planned"
+    },
+  
+    "navigation": {
+      "sneakPeek": "exclusive preview",
+      "joinWaitlist": "join the waitlist",
+      "about": "about ai.Cook"
+    },
+  
+    "animations": {
+      "title": "ai.Cook",
+      "subtitle": "Your personal AI-powered culinary companion."
+    },
+  
+    "landing": {
+      "title": "discover AI in the kitchen, one recipe at a time",
+      "subtitle": "coming this fall"
+    },
+  
+    "botAndRecipes": {
+      "title": "Discover ai.Cook",
+      "subtitle": "Experience the future of cooking with your intelligent culinary assistant",
+      "headers": {
+        "1": "Your Digital Chef",
+        "2": "Your Personalized Cookbook",
+        "3": "Visually Inspiring Recipes",
+        "4": "Smart Culinary Recommendations"
+      },
+      "descriptions": {
+        "1": "Just decide what you’d like to enjoy – ai.Cook takes care of the rest.",
+        "2": "Your ingredients are automatically detected. Simply share your taste, available time, and preferred complexity level.",
+        "3": "Browse curated recipe suggestions and get inspired for your next meal.",
+        "4": "ai.Cook’s recipe collection grows daily with fresh creations to surprise your palate.",
+        "5": "Our culinary algorithms recommend the perfect dishes based on your pantry and lifestyle.",
+        "6": "We designed our recipes to be as beautiful as they are delicious: clear, visual, and effortless to follow.",
+        "7": "Not sure about an ingredient or measurement? Ask our integrated chatbot for instant support.",
+        "8": "In seconds, get your top 3 recipes matched to your pantry, diet, and taste.",
+        "9": "Want more? Explore variations, ingredient swaps, or pro culinary tips."
+      },
+      "tags": {
+        "1": "Smart Detection",
+        "2": "Personal Preferences",
+        "3": "Time Management",
+        "4": "Culinary Algorithms",
+        "5": "Fresh Content",
+        "6": "Fully Personalized",
+        "7": "Visual Design",
+        "8": "Easy to Follow",
+        "9": "Integrated Help",
+        "10": "Instant Results",
+        "11": "Diet Friendly",
+        "12": "Smart Tips"
+      }
+    },
+  
+    "product": {
+      "title": "Smart Organization",
+      "subtitle": "Manage your pantry with intelligent organization and AI-powered insights",
+      "headers": {
+        "1": "Ingredient Management",
+        "2": "Personalized List",
+        "3": "Intelligent Details",
+        "4": "Your Digital Pantry"
+      },
+      "descriptions": {
+        "1": "Add ingredients in seconds – choose from our enriched database or create your own.",
+        "2": "Build your personal pantry list with essentials or favorite items.",
+        "3": "Enter a quantity and let ai.Cook handle the rest.",
+        "4": "Nutrition, freshness, and availability tracked automatically by AI.",
+        "5": "View and manage all your ingredients effortlessly.",
+        "6": "Organize by categories, diets, intolerances, and more."
+      },
+      "tags": {
+        "1": "Quick Add",
+        "2": "Rich Database",
+        "3": "Custom Ingredients",
+        "4": "Auto Nutrition",
+        "5": "Smart Tracking",
+        "6": "AI Powered",
+        "7": "Effortless Management",
+        "8": "Smart Categories",
+        "9": "Diet Support"
+      }
+    },
+  
+    "footer": {
+      "aiCook": "ai.Cook",
+      "contactUs": "Contact",
+      "copyright": "© 2025 ai.Cook. All rights reserved."
+    }
+  }

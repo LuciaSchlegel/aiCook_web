@@ -1,0 +1,94 @@
+{
+    "common": {
+      "loading": "Wird vorbereitet...",
+      "error": "Etwas ist anders gelaufen als geplant"
+    },
+  
+    "navigation": {
+      "sneakPeek": "Exklusiver Einblick",
+      "joinWaitlist": "Auf die Warteliste",
+      "about": "Über ai.Cook"
+    },
+  
+    "animations": {
+      "title": "ai.Cook",
+      "subtitle": "Dein persönlicher KI-Küchenbegleiter."
+    },
+  
+    "landing": {
+      "title": "Erlebe KI beim Kochen – Rezept für Rezept",
+      "subtitle": "verfügbar ab Herbst"
+    },
+  
+    "botAndRecipes": {
+      "title": "Entdecke ai.Cook",
+      "subtitle": "Erlebe die Zukunft des Kochens mit deinem intelligenten Küchenassistenten",
+      "headers": {
+        "1": "Dein Digitaler Chefkoch",
+        "2": "Dein Persönliches Kochbuch",
+        "3": "Visuell Inspirierende Rezepte",
+        "4": "Clever Empfohlene Gerichte"
+      },
+      "descriptions": {
+        "1": "Du entscheidest, worauf du Lust hast – ai.Cook kümmert sich um den Rest.",
+        "2": "Zutaten werden automatisch erkannt. Teile einfach deine Vorlieben, verfügbare Zeit und den gewünschten Schwierigkeitsgrad.",
+        "3": "Stöbere durch kuratierte Rezepte und lass dich inspirieren.",
+        "4": "Die Rezeptsammlung von ai.Cook wächst täglich mit neuen Kreationen – für endlose Genussmomente.",
+        "5": "Unsere Koch-Algorithmen schlagen dir Gerichte vor, die perfekt zu deinem Vorrat und Lebensstil passen.",
+        "6": "Unsere Rezepte sind so gestaltet, dass sie genauso köstlich aussehen wie sie schmecken – klar, visuell und leicht verständlich.",
+        "7": "Unbekannte Zutat oder Maßeinheit? Frag einfach unseren integrierten Chatbot.",
+        "8": "In Sekunden erhältst du deine Top 3 Rezepte – abgestimmt auf Vorrat, Diät und Geschmack.",
+        "9": "Mehr Lust? Entdecke Variationen, Zutatentausch und Profi-Kochtipps."
+      },
+      "tags": {
+        "1": "Intelligente Erkennung",
+        "2": "Persönliche Vorlieben",
+        "3": "Zeitmanagement",
+        "4": "Koch-Algorithmen",
+        "5": "Frische Inhalte",
+        "6": "Komplett Personalisiert",
+        "7": "Visuelles Design",
+        "8": "Einfach Nachzukochen",
+        "9": "Integrierte Hilfe",
+        "10": "Sofortige Ergebnisse",
+        "11": "Diätfreundlich",
+        "12": "Clever Tipps"
+      }
+    },
+  
+    "product": {
+      "title": "Intelligente Organisation",
+      "subtitle": "Verwalte deine Vorräte mit smarter Ordnung und KI-gestützten Insights",
+      "headers": {
+        "1": "Zutaten-Management",
+        "2": "Personalisierte Liste",
+        "3": "Intelligente Details",
+        "4": "Deine Digitale Vorratskammer"
+      },
+      "descriptions": {
+        "1": "Füge Zutaten in Sekunden hinzu – aus unserer umfangreichen Datenbank oder selbst erstellt.",
+        "2": "Baue deine persönliche Vorratsliste auf – mit Basics oder Lieblingszutaten.",
+        "3": "Menge eingeben, den Rest übernimmt ai.Cook.",
+        "4": "Nährwerte, Frische und Verfügbarkeit werden automatisch von der KI getrackt.",
+        "5": "Überblicke und verwalte alle Zutaten ohne Aufwand.",
+        "6": "Sortiere nach Kategorien, Ernährungsformen, Unverträglichkeiten und mehr."
+      },
+      "tags": {
+        "1": "Schnell Hinzufügen",
+        "2": "Umfangreiche Datenbank",
+        "3": "Eigene Zutaten",
+        "4": "Automatische Nährwerte",
+        "5": "Smartes Tracking",
+        "6": "KI-gestützt",
+        "7": "Einfache Verwaltung",
+        "8": "Smarte Kategorien",
+        "9": "Diät-Support"
+      }
+    },
+  
+    "footer": {
+      "aiCook": "ai.Cook",
+      "contactUs": "Kontakt",
+      "copyright": "© 2025 ai.Cook. Alle Rechte vorbehalten."
+    }
+  }

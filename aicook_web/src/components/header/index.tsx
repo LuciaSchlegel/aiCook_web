@@ -1,9 +1,13 @@
+// components/Header.tsx
 "use client";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { useI18nContext } from "@/context/I18nContext";
+import LanguageSelector from "../language_selector";
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
+  const { t, isReady } = useI18nContext();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -46,14 +50,17 @@ export default function Header() {
       }}
     >
       <div className="flex justify-between items-center p-3 xs:p-4 sm:p-5 lg:p-6 transition-all duration-500 max-w-7xl mx-auto">
+        {/* Left Navigation */}
         <Link
           href="/#bot-and-recipes"
           onClick={handleSmoothScroll}
           className="text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl transition-all duration-300 hover:scale-105 active:scale-95 text-[#284139] font-light tracking-wide"
           style={{ textShadow: '0 1px 2px rgba(40, 65, 57, 0.1)' }}
         >
-          sneak peek
+          {isReady ? t('navigation.sneakPeek', 'sneak peek') : 'sneak peek'}
         </Link>
+
+        {/* Center Content - Email Link */}
         <Link
           href="mailto:jointhewaitlist@aicook.com"
           className="text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl transition-all duration-300 hover:scale-105 active:scale-95 text-[#284139] font-light tracking-wide text-center px-2 max-w-[45vw] xs:max-w-[55vw] sm:max-w-none truncate"
@@ -61,18 +68,41 @@ export default function Header() {
             textShadow: '0 1px 2px rgba(40, 65, 57, 0.1)',
           }}
         >
-          <span className="hidden lg:inline">jointhewaitlist@aicook.com</span>
-          <span className="hidden sm:inline lg:hidden">join@aicook.com</span>
-          <span className="inline sm:hidden">join waitlist</span>
+          <span className="hidden lg:inline">
+            {isReady ? t('navigation.joinWaitlist', 'join waitlist') : 'join waitlist'}
+          </span>
+          <span className="hidden sm:inline lg:hidden">
+            {isReady ? t('navigation.joinWaitlist', 'join waitlist') : 'join waitlist'}
+          </span>
+          <span className="inline sm:hidden">
+            {isReady ? t('navigation.joinWaitlist', 'join waitlist') : 'join waitlist'}
+          </span>
         </Link>
-        <Link
-          href="/#product"
-          onClick={handleSmoothScroll}
-          className="text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl transition-all duration-300 hover:scale-105 active:scale-95 text-[#284139] font-light tracking-wide"
-          style={{ textShadow: '0 1px 2px rgba(40, 65, 57, 0.1)' }}
-        >
-          about
-        </Link>
+
+        {/* Right Section - About Link and Language Selector */}
+        <div className="flex items-center gap-2 xs:gap-3 sm:gap-4 lg:gap-6">
+          <Link
+            href="/#product"
+            onClick={handleSmoothScroll}
+            className="text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl transition-all duration-300 hover:scale-105 active:scale-95 text-[#284139] font-light tracking-wide"
+            style={{ textShadow: '0 1px 2px rgba(40, 65, 57, 0.1)' }}
+          >
+            {isReady ? t('navigation.about', 'about') : 'about'}
+          </Link>
+          
+          {/* Language Selector - Different variants for different screen sizes */}
+          <div className="flex items-center">
+            {/* Mobile: Buttons variant for better touch targets */}
+            <div className="block sm:hidden">
+              <LanguageSelector variant="buttons" />
+            </div>
+            
+            {/* Tablet and Desktop: Dropdown variant for cleaner look */}
+            <div className="hidden sm:block">
+              <LanguageSelector variant="dropdown" />
+            </div>
+          </div>
+        </div>
       </div>
     </header>
   );
