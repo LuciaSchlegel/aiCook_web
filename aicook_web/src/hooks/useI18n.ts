@@ -33,11 +33,11 @@ const loadTranslations = async (locale: SupportedLocales): Promise<AppTranslatio
     
     return loadedTranslations
   } catch (error) {
-    console.warn(`Failed to load translations for ${locale}, falling back to ${DEFAULT_LOCALE}`)
+    console.warn(`Failed to load translations for ${locale}, falling back to ${DEFAULT_LOCALE}. ${error}`)
     
     // If we're already trying to load the default locale, throw the error
     if (locale === DEFAULT_LOCALE) {
-      throw new Error(`Could not load default translations for ${DEFAULT_LOCALE}`)
+      throw new Error(`Could not load default translations for ${DEFAULT_LOCALE}. ${error}`)
     }
     
     // Recursively try to load the default locale
@@ -80,6 +80,7 @@ export default function useI18n(): I18nContextValue {
 
       try {
         const keys = key.split('.')
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         let value: any = translations
 
         for (const k of keys) {
@@ -140,7 +141,7 @@ export default function useI18n(): I18nContextValue {
       } catch (err) {
         const errorMessage = err instanceof Error ? err.message : 'Failed to load translations'
         setError(errorMessage)
-        console.error('Failed to change language:', err)
+        console.error('Failed to change language:', err, errorMessage)
         
         // If we failed to load and don't have any translations, try to load default
         if (!isReady) {
