@@ -33,6 +33,20 @@ body {
     src: url('/fonts/Melodrama-SemiBold.otf') format('opentype');
 }
 
+@font-face {
+    font-family: 'Casta';
+    src: url('/fonts/Casta.otf') format('opentype');
+}
+
+.font-casta {
+  font-family: 'Casta', sans-serif;
+  letter-spacing: 0.1em;
+  line-height: 1.5;
+  text-rendering: optimizeLegibility;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
 .font-melodrama-regular {
   font-family: 'Melodrama Regular', sans-serif;
   letter-spacing: 0.1em;

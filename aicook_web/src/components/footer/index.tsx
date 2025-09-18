@@ -19,7 +19,7 @@ export default function Footer() {
             height={40}
             className="h-8 xs:h-9 sm:h-10 lg:h-12 w-auto"
           />
-          <span className="tracking-widest font-melodrama-regular text-lg xs:text-xl sm:text-2xl lg:text-3xl">
+          <span className="tracking-widest font-casta text-lg xs:text-xl sm:text-2xl lg:text-3xl">
             {isReady ? t('footer.aiCook', 'ai.Cook') : 'ai.Cook'}
           </span>
         </div>
