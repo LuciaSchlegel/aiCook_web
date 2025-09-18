@@ -18,15 +18,6 @@ export default function BotAndRecipes() {
       style={{ width: 'auto', height: 'auto' }}
     />,
     <Image
-    key="recipe-recommendations"
-    src="/mockups/ai_recomm_ready.png"
-    alt="Recipe Recommendations Screen"
-    className="w-full h-auto drop-shadow-2xl max-w-[200px] xs:max-w-[240px] sm:max-w-[280px] md:max-w-[320px] lg:max-w-[360px]"
-    width={360}
-    height={640}
-    style={{ width: 'auto', height: 'auto' }}
-    />,
-    <Image
       key="recipes"
       src="/mockups/recipes_screen.png"
       alt="Recipes Screen"
@@ -36,40 +27,40 @@ export default function BotAndRecipes() {
       style={{ width: 'auto', height: 'auto' }}
     />,
     <Image
-    key="recipe-card"
-    src="/mockups/recipe_ov.png"
-    alt="Recipe Card Screen"
-    className="w-full h-auto drop-shadow-2xl max-w-[200px] xs:max-w-[240px] sm:max-w-[280px] md:max-w-[320px] lg:max-w-[360px]"
-    width={360}
-    height={640}
-    style={{ width: 'auto', height: 'auto' }}
+      key="recipe-card"
+      src="/mockups/recipe_ov.png"
+      alt="Recipe Card Screen"
+      className="w-full h-auto drop-shadow-2xl max-w-[200px] xs:max-w-[240px] sm:max-w-[280px] md:max-w-[320px] lg:max-w-[360px]"
+      width={360}
+      height={640}
+      style={{ width: 'auto', height: 'auto' }}
     />,
     <Image
-    key="unavailable"
-    src="/mockups/unavailable.png"
-    alt="Unavailable Ingredients"
-    className="w-full h-auto drop-shadow-2xl max-w-[200px] xs:max-w-[240px] sm:max-w-[280px] md:max-w-[320px] lg:max-w-[360px]"
-    width={360}
-    height={640}
-    style={{ width: 'auto', height: 'auto' }}
+      key="recipe-steps"
+      src="/mockups/recipe_steps.png"
+      alt="Recipe Steps"
+      className="w-full h-auto drop-shadow-2xl max-w-[200px] xs:max-w-[240px] sm:max-w-[280px] md:max-w-[320px] lg:max-w-[360px]"
+      width={360}
+      height={640}
+      style={{ width: 'auto', height: 'auto' }}
     />,
     <Image
-    key="recipe-steps"
-    src="/mockups/recipe_steps.png"
-    alt="Recipe Steps"
-    className="w-full h-auto drop-shadow-2xl max-w-[200px] xs:max-w-[240px] sm:max-w-[280px] md:max-w-[320px] lg:max-w-[360px]"
-    width={360}
-    height={640}
-    style={{ width: 'auto', height: 'auto' }}
+      key="unavailable"
+      src="/mockups/unavailable.png"
+      alt="Unavailable Ingredients"
+      className="w-full h-auto drop-shadow-2xl max-w-[200px] xs:max-w-[240px] sm:max-w-[280px] md:max-w-[320px] lg:max-w-[360px]"
+      width={360}
+      height={640}
+      style={{ width: 'auto', height: 'auto' }}
     />,
     <Image
-    key="ai-substitution"
-    src="/mockups/ai_subst.png"
-    alt="AI Ingredient Substitution"
-    className="w-full h-auto drop-shadow-2xl max-w-[200px] xs:max-w-[240px] sm:max-w-[280px] md:max-w-[320px] lg:max-w-[360px]"
-    width={360}
-    height={640}
-    style={{ width: 'auto', height: 'auto' }}
+      key="ai-substitution"
+      src="/mockups/ai_subst.png"
+      alt="AI Ingredient Substitution"
+      className="w-full h-auto drop-shadow-2xl max-w-[200px] xs:max-w-[240px] sm:max-w-[280px] md:max-w-[320px] lg:max-w-[360px]"
+      width={360}
+      height={640}
+      style={{ width: 'auto', height: 'auto' }}
     />,
   ];
 
@@ -77,153 +68,150 @@ export default function BotAndRecipes() {
     <div key="desc-1" className="space-y-3 sm:space-y-4 lg:space-y-6">
       <h2 className="font-melodrama-regular text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#284139] leading-tight" 
           style={{ letterSpacing: '0.03em', textShadow: '0 0 10px rgba(0, 0, 0, 0.1)' }}>
-        {isReady ? t('botAndRecipes.headers.1', 'Your Digital Chef') : 'Your Digital Chef'}
+        {isReady ? t('botAndRecipes.headers.1', 'Your Intelligent Cooking Assistant') : 'Your Intelligent Cooking Assistant'}
       </h2>
       <div className="space-y-3 sm:space-y-4">
         <p className="text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl text-[#284139]/80 leading-relaxed font-light">
-          {isReady ? t('botAndRecipes.descriptions.1', 'You only have to worry about what you want to eat, ai.Cook will take care of the rest.') : 'You only have to worry about what you want to eat, ai.Cook will take care of the rest.'}
+          {isReady ? t('botAndRecipes.descriptions.1', 'Meet your personal AI chef that understands your preferences and helps you discover perfect recipes. Simply tell our smart assistant what you\'re craving, your available time, and preferred difficulty level.') : 'Meet your personal AI chef that understands your preferences and helps you discover perfect recipes. Simply tell our smart assistant what you\'re craving, your available time, and preferred difficulty level.'}
         </p>
         <p className="text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl text-[#284139]/70 leading-relaxed font-light">
-          {isReady ? t('botAndRecipes.descriptions.2', 'Available ingredients are automatically detected, so you just have to tell our smart assistant your personal preferences, available time, and difficulty level.') : 'Available ingredients are automatically detected, so you just have to tell our smart assistant your personal preferences, available time, and difficulty level.'}
+          {isReady ? t('botAndRecipes.descriptions.2', 'The AI automatically detects your available ingredients and customizes recommendations based on cuisine preferences, cooking time, and skill level for a truly personalized experience.') : 'The AI automatically detects your available ingredients and customizes recommendations based on cuisine preferences, cooking time, and skill level for a truly personalized experience.'}
         </p>
       </div>
       <div className="flex flex-wrap gap-1.5 sm:gap-2 mt-4 sm:mt-6">
         <span className="px-2 xs:px-3 py-1 xs:py-1.5 bg-[#284139]/10 text-[#284139] text-xs sm:text-sm rounded-full border border-[#284139]/20">
-          {isReady ? t('botAndRecipes.tags.1', 'Smart Detection') : 'Smart Detection'}
+          {isReady ? t('botAndRecipes.tags.1', 'AI Recommendations') : 'AI Recommendations'}
         </span>
         <span className="px-2 xs:px-3 py-1 xs:py-1.5 bg-[#284139]/10 text-[#284139] text-xs sm:text-sm rounded-full border border-[#284139]/20">
-          {isReady ? t('botAndRecipes.tags.2', 'Personal Preferences') : 'Personal Preferences'}
+          {isReady ? t('botAndRecipes.tags.2', 'Smart Preferences') : 'Smart Preferences'}
         </span>
         <span className="px-2 xs:px-3 py-1 xs:py-1.5 bg-[#284139]/10 text-[#284139] text-xs sm:text-sm rounded-full border border-[#284139]/20">
-          {isReady ? t('botAndRecipes.tags.3', 'Time Management') : 'Time Management'}
+          {isReady ? t('botAndRecipes.tags.3', 'Personalized Results') : 'Personalized Results'}
         </span>
       </div>
     </div>,
     <div key="desc-2" className="space-y-3 sm:space-y-4 lg:space-y-6">
       <h2 className="font-melodrama-regular text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#284139] leading-tight" 
           style={{ letterSpacing: '0.03em', textShadow: '0 0 10px rgba(0, 0, 0, 0.1)' }}>
-        {isReady ? t('botAndRecipes.headers.2', 'Your Curated Cookbook') : 'Your Curated Cookbook'}
+        {isReady ? t('botAndRecipes.headers.2', 'Smart Recipe Discovery') : 'Smart Recipe Discovery'}
       </h2>
       <div className="space-y-3 sm:space-y-4">
         <p className="text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl text-[#284139]/80 leading-relaxed font-light">
-          {isReady ? t('botAndRecipes.descriptions.3', 'Explore a selection of suggested recipes and find inspiration for your next meals.') : 'Explore a selection of suggested recipes and find inspiration for your next meals.'}
+          {isReady ? t('botAndRecipes.descriptions.3', 'Browse intelligently curated recipes tailored to your tastes and dietary preferences. Filter by cuisine type, cooking time, and ingredient availability with our advanced search system.') : 'Browse intelligently curated recipes tailored to your tastes and dietary preferences. Filter by cuisine type, cooking time, and ingredient availability with our advanced search system.'}
         </p>
         <p className="text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl text-[#284139]/70 leading-relaxed font-light">
-          {isReady ? t('botAndRecipes.descriptions.4', 'ai.Cook&apos;s recipe database is constantly updated and enriched with new recipes, so you can always find something new.') : 'ai.Cook&apos;s recipe database is constantly updated and enriched with new recipes, so you can always find something new.'}
-        </p>
-        <p className="text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl text-[#284139]/70 leading-relaxed font-light">
-          {isReady ? t('botAndRecipes.descriptions.5', 'Our algorithms will suggest you the best recipes according to your available ingredients, preferences, and more.') : 'Our algorithms will suggest you the best recipes according to your available ingredients, preferences, and more.'}
+          {isReady ? t('botAndRecipes.descriptions.4', 'Our database is continuously updated with fresh recipes from around the world, ensuring you always have new culinary adventures to explore while respecting your dietary needs and preferences.') : 'Our database is continuously updated with fresh recipes from around the world, ensuring you always have new culinary adventures to explore while respecting your dietary needs and preferences.'}
         </p>
       </div>
       <div className="flex flex-wrap gap-1.5 sm:gap-2 mt-4 sm:mt-6">
         <span className="px-2 xs:px-3 py-1 xs:py-1.5 bg-[#284139]/10 text-[#284139] text-xs sm:text-sm rounded-full border border-[#284139]/20">
-          {isReady ? t('botAndRecipes.tags.4', 'Smart Algorithms') : 'Smart Algorithms'}
+          {isReady ? t('botAndRecipes.tags.4', 'Curated Collection') : 'Curated Collection'}
         </span>
         <span className="px-2 xs:px-3 py-1 xs:py-1.5 bg-[#284139]/10 text-[#284139] text-xs sm:text-sm rounded-full border border-[#284139]/20">
-          {isReady ? t('botAndRecipes.tags.5', 'Fresh Content') : 'Fresh Content'}  
+          {isReady ? t('botAndRecipes.tags.5', 'Smart Filtering') : 'Smart Filtering'}  
         </span>
         <span className="px-2 xs:px-3 py-1 xs:py-1.5 bg-[#284139]/10 text-[#284139] text-xs sm:text-sm rounded-full border border-[#284139]/20">
-          {isReady ? t('botAndRecipes.tags.6', 'Personalized') : 'Personalized'}
+          {isReady ? t('botAndRecipes.tags.6', 'Global Cuisine') : 'Global Cuisine'}
         </span>
       </div>
     </div>,
     <div key="desc-3" className="space-y-3 sm:space-y-4 lg:space-y-6">
       <h2 className="font-melodrama-regular text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#284139] leading-tight" 
           style={{ letterSpacing: '0.03em', textShadow: '0 0 10px rgba(0, 0, 0, 0.1)' }}>
-        {isReady ? t('botAndRecipes.headers.3', 'Beautiful Recipe Cards') : 'Beautiful Recipe Cards'}
+        {isReady ? t('botAndRecipes.headers.3', 'Detailed Recipe Cards') : 'Detailed Recipe Cards'}
       </h2>
       <div className="space-y-3 sm:space-y-4">
         <p className="text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl text-[#284139]/80 leading-relaxed font-light">
-          {isReady ? t('botAndRecipes.descriptions.6', 'It is said that food enters first through the eyes, so we made sure to make our recipe cards as beautiful as they are tasty. They are designed to be easy to understand, use, and follow.') : 'It is said that food enters first through the eyes, so we made sure to make our recipe cards as beautiful as they are tasty. They are designed to be easy to understand, use, and follow.'}
+          {isReady ? t('botAndRecipes.descriptions.6', 'Every recipe features beautiful, comprehensive cards with complete ingredient lists, nutritional information, and cooking specifications. Visual indicators show ingredient availability and missing items at a glance.') : 'Every recipe features beautiful, comprehensive cards with complete ingredient lists, nutritional information, and cooking specifications. Visual indicators show ingredient availability and missing items at a glance.'}
         </p>
         <p className="text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl text-[#284139]/70 leading-relaxed font-light">
-          {isReady ? t('botAndRecipes.descriptions.7', 'In case you&apos;re not familiar with an ingredient or quantity unit, you can just jump into our integrated chatbot, and it will give you all the assistance you need.') : 'In case you&apos;re not familiar with an ingredient or quantity unit, you can just jump into our integrated chatbot, and it will give you all the assistance you need.'}
+          {isReady ? t('botAndRecipes.descriptions.7', 'Interactive elements let you tap for ingredient details, measurements, and substitution suggestions. Our integrated AI assistant provides instant help with unfamiliar ingredients or cooking techniques.') : 'Interactive elements let you tap for ingredient details, measurements, and substitution suggestions. Our integrated AI assistant provides instant help with unfamiliar ingredients or cooking techniques.'}
         </p>
       </div>
       <div className="flex flex-wrap gap-1.5 sm:gap-2 mt-4 sm:mt-6">
         <span className="px-2 xs:px-3 py-1 xs:py-1.5 bg-[#284139]/10 text-[#284139] text-xs sm:text-sm rounded-full border border-[#284139]/20">
-          {isReady ? t('botAndRecipes.tags.7', 'Visual Design') : 'Visual Design'}
+          {isReady ? t('botAndRecipes.tags.7', 'Visual Indicators') : 'Visual Indicators'}
         </span>
         <span className="px-2 xs:px-3 py-1 xs:py-1.5 bg-[#284139]/10 text-[#284139] text-xs sm:text-sm rounded-full border border-[#284139]/20">
-          {isReady ? t('botAndRecipes.tags.8', 'Easy to Follow') : 'Easy to Follow'}
+          {isReady ? t('botAndRecipes.tags.8', 'Complete Information') : 'Complete Information'}
         </span>
         <span className="px-2 xs:px-3 py-1 xs:py-1.5 bg-[#284139]/10 text-[#284139] text-xs sm:text-sm rounded-full border border-[#284139]/20">
-          {isReady ? t('botAndRecipes.tags.9', 'Integrated Help') : 'Integrated Help'}
+          {isReady ? t('botAndRecipes.tags.9', 'Interactive Help') : 'Interactive Help'}
         </span>
       </div>
     </div>,
     <div key="desc-4" className="space-y-3 sm:space-y-4 lg:space-y-6">
       <h2 className="font-melodrama-regular text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#284139] leading-tight" 
           style={{ letterSpacing: '0.03em', textShadow: '0 0 10px rgba(0, 0, 0, 0.1)' }}>
-        {isReady ? t('botAndRecipes.headers.4', 'Step-by-Step Guidance') : 'Step-by-Step Guidance'}
+        {isReady ? t('botAndRecipes.headers.4', 'Step-by-Step Cooking Guide') : 'Step-by-Step Cooking Guide'}
       </h2>
       <div className="space-y-3 sm:space-y-4">
         <p className="text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl text-[#284139]/80 leading-relaxed font-light">
-          {isReady ? t('botAndRecipes.descriptions.8', 'Follow detailed, easy-to-understand cooking steps with visual guidance and helpful tips.') : 'Follow detailed, easy-to-understand cooking steps with visual guidance and helpful tips.'}
+          {isReady ? t('botAndRecipes.descriptions.8', 'Follow clear, detailed cooking instructions with progressive steps that guide you through the entire cooking process. Each step includes timing, temperature, and technique details for perfect results.') : 'Follow clear, detailed cooking instructions with progressive steps that guide you through the entire cooking process. Each step includes timing, temperature, and technique details for perfect results.'}
         </p>
         <p className="text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl text-[#284139]/70 leading-relaxed font-light">
-          {isReady ? t('botAndRecipes.descriptions.9', 'Each step is carefully crafted to ensure your cooking success, with timing, temperature, and technique guidance.') : 'Each step is carefully crafted to ensure your cooking success, with timing, temperature, and technique guidance.'}
+          {isReady ? t('botAndRecipes.descriptions.9', 'The intuitive progress tracker helps you stay organized, while built-in scheduling and sharing features let you plan meals and cook with others seamlessly.') : 'The intuitive progress tracker helps you stay organized, while built-in scheduling and sharing features let you plan meals and cook with others seamlessly.'}
         </p>
       </div>
       <div className="flex flex-wrap gap-1.5 sm:gap-2 mt-4 sm:mt-6">
         <span className="px-2 xs:px-3 py-1 xs:py-1.5 bg-[#284139]/10 text-[#284139] text-xs sm:text-sm rounded-full border border-[#284139]/20">
-          {isReady ? t('botAndRecipes.tags.10', 'Visual Guidance') : 'Visual Guidance'}
+          {isReady ? t('botAndRecipes.tags.10', 'Progress Tracking') : 'Progress Tracking'}
         </span>
         <span className="px-2 xs:px-3 py-1 xs:py-1.5 bg-[#284139]/10 text-[#284139] text-xs sm:text-sm rounded-full border border-[#284139]/20">
-          {isReady ? t('botAndRecipes.tags.11', 'Cooking Tips') : 'Cooking Tips'}
+          {isReady ? t('botAndRecipes.tags.11', 'Detailed Instructions') : 'Detailed Instructions'}
         </span>
         <span className="px-2 xs:px-3 py-1 xs:py-1.5 bg-[#284139]/10 text-[#284139] text-xs sm:text-sm rounded-full border border-[#284139]/20">
-          {isReady ? t('botAndRecipes.tags.12', 'Success Guaranteed') : 'Success Guaranteed'}
+          {isReady ? t('botAndRecipes.tags.12', 'Meal Scheduling') : 'Meal Scheduling'}
         </span>
       </div>
     </div>,
     <div key="desc-5" className="space-y-3 sm:space-y-4 lg:space-y-6">
       <h2 className="font-melodrama-regular text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#284139] leading-tight" 
           style={{ letterSpacing: '0.03em', textShadow: '0 0 10px rgba(0, 0, 0, 0.1)' }}>
-        {isReady ? t('botAndRecipes.headers.5', 'Smart Substitutions') : 'Smart Substitutions'}
+        {isReady ? t('botAndRecipes.headers.5', 'Smart Ingredient Alerts') : 'Smart Ingredient Alerts'}
       </h2>
       <div className="space-y-3 sm:space-y-4">
         <p className="text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl text-[#284139]/80 leading-relaxed font-light">
-          {isReady ? t('botAndRecipes.descriptions.10', 'Missing an ingredient? No problem! Our AI suggests perfect substitutions based on what you have available.') : 'Missing an ingredient? No problem! Our AI suggests perfect substitutions based on what you have available.'}
+          {isReady ? t('botAndRecipes.descriptions.10', 'Get instant notifications about missing ingredients with smart alternatives and shopping suggestions. The system clearly identifies what you need and provides convenient solutions.') : 'Get instant notifications about missing ingredients with smart alternatives and shopping suggestions. The system clearly identifies what you need and provides convenient solutions.'}
         </p>
         <p className="text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl text-[#284139]/70 leading-relaxed font-light">
-          {isReady ? t('botAndRecipes.descriptions.11', 'Get creative alternatives that maintain the same flavor profile and cooking properties, so your dish turns out perfectly every time.') : 'Get creative alternatives that maintain the same flavor profile and cooking properties, so your dish turns out perfectly every time.'}
+          {isReady ? t('botAndRecipes.descriptions.11', 'Choose to buy missing ingredients, find suitable substitutions through AI suggestions, or discover alternative recipes that match your current pantry inventory perfectly.') : 'Choose to buy missing ingredients, find suitable substitutions through AI suggestions, or discover alternative recipes that match your current pantry inventory perfectly.'}
         </p>
       </div>
       <div className="flex flex-wrap gap-1.5 sm:gap-2 mt-4 sm:mt-6">
         <span className="px-2 xs:px-3 py-1 xs:py-1.5 bg-[#284139]/10 text-[#284139] text-xs sm:text-sm rounded-full border border-[#284139]/20">
-          {isReady ? t('botAndRecipes.tags.13', 'AI-Powered') : 'AI-Powered'}
+          {isReady ? t('botAndRecipes.tags.13', 'Smart Alerts') : 'Smart Alerts'}
         </span>
         <span className="px-2 xs:px-3 py-1 xs:py-1.5 bg-[#284139]/10 text-[#284139] text-xs sm:text-sm rounded-full border border-[#284139]/20">
-          {isReady ? t('botAndRecipes.tags.14', 'Flavor Matching') : 'Flavor Matching'}
+          {isReady ? t('botAndRecipes.tags.14', 'Shopping Help') : 'Shopping Help'}
         </span>
         <span className="px-2 xs:px-3 py-1 xs:py-1.5 bg-[#284139]/10 text-[#284139] text-xs sm:text-sm rounded-full border border-[#284139]/20">
-          {isReady ? t('botAndRecipes.tags.15', 'Flexible Cooking') : 'Flexible Cooking'}
+          {isReady ? t('botAndRecipes.tags.15', 'Alternative Solutions') : 'Alternative Solutions'}
         </span>
       </div>
     </div>,
     <div key="desc-6" className="space-y-3 sm:space-y-4 lg:space-y-6">
       <h2 className="font-melodrama-regular text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#284139] leading-tight" 
           style={{ letterSpacing: '0.03em', textShadow: '0 0 10px rgba(0, 0, 0, 0.1)' }}>
-        {isReady ? t('botAndRecipes.headers.6', 'Ingredient Management') : 'Ingredient Management'}
+        {isReady ? t('botAndRecipes.headers.6', 'AI-Powered Substitutions') : 'AI-Powered Substitutions'}
       </h2>
       <div className="space-y-3 sm:space-y-4">
         <p className="text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl text-[#284139]/80 leading-relaxed font-light">
-          {isReady ? t('botAndRecipes.descriptions.12', 'Keep track of what you have and what you need. Get clear notifications about unavailable ingredients.') : 'Keep track of what you have and what you need. Get clear notifications about unavailable ingredients.'}
+          {isReady ? t('botAndRecipes.descriptions.12', 'Discover intelligent ingredient alternatives that maintain flavor profiles and cooking properties. Our AI analyzes your pantry and suggests perfect substitutions for missing ingredients.') : 'Discover intelligent ingredient alternatives that maintain flavor profiles and cooking properties. Our AI analyzes your pantry and suggests perfect substitutions for missing ingredients.'}
         </p>
         <p className="text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl text-[#284139]/70 leading-relaxed font-light">
-          {isReady ? t('botAndRecipes.descriptions.13', 'Plan your shopping list or find alternative recipes based on your current pantry contents.') : 'Plan your shopping list or find alternative recipes based on your current pantry contents.'}
+          {isReady ? t('botAndRecipes.descriptions.13', 'Get creative alternatives for butter, milk, and other common ingredients with detailed explanations of how each substitution affects taste, texture, and nutritional value.') : 'Get creative alternatives for butter, milk, and other common ingredients with detailed explanations of how each substitution affects taste, texture, and nutritional value.'}
         </p>
       </div>
       <div className="flex flex-wrap gap-1.5 sm:gap-2 mt-4 sm:mt-6">
         <span className="px-2 xs:px-3 py-1 xs:py-1.5 bg-[#284139]/10 text-[#284139] text-xs sm:text-sm rounded-full border border-[#284139]/20">
-          {isReady ? t('botAndRecipes.tags.16', 'Pantry Tracking') : 'Pantry Tracking'}
+          {isReady ? t('botAndRecipes.tags.16', 'Smart Substitutions') : 'Smart Substitutions'}
         </span>
         <span className="px-2 xs:px-3 py-1 xs:py-1.5 bg-[#284139]/10 text-[#284139] text-xs sm:text-sm rounded-full border border-[#284139]/20">
-          {isReady ? t('botAndRecipes.tags.17', 'Smart Notifications') : 'Smart Notifications'}
+          {isReady ? t('botAndRecipes.tags.17', 'Flavor Matching') : 'Flavor Matching'}
         </span>
         <span className="px-2 xs:px-3 py-1 xs:py-1.5 bg-[#284139]/10 text-[#284139] text-xs sm:text-sm rounded-full border border-[#284139]/20">
-          {isReady ? t('botAndRecipes.tags.18', 'Shopping Lists') : 'Shopping Lists'}
+          {isReady ? t('botAndRecipes.tags.18', 'Creative Alternatives') : 'Creative Alternatives'}
         </span>
       </div>
     </div>,

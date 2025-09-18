@@ -22,7 +22,7 @@ module.exports = {
         mutedWhite: "#E8E4D9",
       },
       fontFamily: {
-        casta: ['Casta', 'sans-serif'],
+        melodrama: ['Melodrama', 'sans-serif'],
         inter: ['Inter', 'sans-serif'],
       },
       spacing: {

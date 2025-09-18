@@ -54,7 +54,7 @@ export function AnimatedWelcome() {
             className="flex flex-col items-center max-w-5xl mx-auto"
           >
             <h1
-              className="font-casta text-5xl xs:text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-[10rem] font-light tracking-wider text-center leading-tight"
+              className="font-melodrama-regular text-5xl xs:text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-[10rem] font-light tracking-wider text-center leading-tight"
               style={{
                 textShadow: '0 0 10px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(255,255,255,0.3)'
               }}

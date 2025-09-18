@@ -9,7 +9,7 @@ export default function Footer() {
 
   return (
     <footer className="w-full bg-[#284139] text-[#e8e4d9] border-t border-[#e8e4d9]/10 relative z-10">
-      <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between px-4 xs:px-6 sm:px-8 lg:px-12 py-8 sm:py-10 lg:py-12 gap-6 sm:gap-8 font-[Casta]">
+      <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between px-4 xs:px-6 sm:px-8 lg:px-12 py-8 sm:py-10 lg:py-12 gap-6 sm:gap-8 font-melodrama-regular">
         {/* Logo and name */}
         <div className="flex items-center gap-2.5 sm:gap-3 lg:gap-4">
           <Image
@@ -19,7 +19,7 @@ export default function Footer() {
             height={40}
             className="h-8 xs:h-9 sm:h-10 lg:h-12 w-auto"
           />
-          <span className="tracking-widest font-casta text-lg xs:text-xl sm:text-2xl lg:text-3xl">
+          <span className="tracking-widest font-melodrama-regular text-lg xs:text-xl sm:text-2xl lg:text-3xl">
             {isReady ? t('footer.aiCook', 'ai.Cook') : 'ai.Cook'}
           </span>
         </div>
